@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare } from 'lucide-react';
 
 const HeroSection = () => {
@@ -8,37 +8,37 @@ const HeroSection = () => {
     { 
       role: "client", 
       message: "Hi, I saw the ad about facial harmonization and wanted to know more.",
-      delay: 1000 
+      delay: 0 
     },
     { 
       role: "ai", 
       message: "Hi! So glad you're here 💚",
-      delay: 2000 
+      delay: 1000 
     },
     { 
       role: "ai", 
       message: "I'm part of Dr. Renata's team and I can help you out.",
-      delay: 3000 
+      delay: 2000 
     },
     { 
       role: "ai", 
       message: "Tell me — what bothers you the most about your face today? That'll help me guide you better ✨",
-      delay: 4000 
+      delay: 3000 
     },
     { 
       role: "client", 
       message: "I want to improve my jawline and look less tired.",
-      delay: 6000 
+      delay: 5000 
     },
     { 
       role: "ai", 
       message: "That's actually one of the most requested treatments at the clinic!",
-      delay: 7000 
+      delay: 6000 
     },
     { 
       role: "ai", 
       message: "Would you like me to explain how it works or would you prefer to schedule a consultation with the doctor?",
-      delay: 8000 
+      delay: 7000 
     },
   ];
 
@@ -46,32 +46,78 @@ const HeroSection = () => {
   const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
   // State to track if a message is currently being typed
   const [typingIndex, setTypingIndex] = useState<number | null>(null);
+  // Reference to chat container for scroll detection
+  const chatRef = useRef<HTMLDivElement>(null);
+  // Track if animation has started
+  const [animationStarted, setAnimationStarted] = useState(false);
 
-  // Animation effect to progressively show messages
+  // Function to check if element is in viewport
+  const isInViewport = (element: HTMLElement): boolean => {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.7
+    );
+  };
+
+  // Handle scroll event to trigger animation
   useEffect(() => {
-    // Start the conversation animation
-    let currentTimeout: NodeJS.Timeout | null = null;
+    const handleScroll = () => {
+      if (chatRef.current && !animationStarted) {
+        if (isInViewport(chatRef.current)) {
+          startChatAnimation();
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Check initial position in case the chat is already in viewport
+    if (chatRef.current && !animationStarted) {
+      if (isInViewport(chatRef.current)) {
+        startChatAnimation();
+      }
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [animationStarted]);
+
+  // Function to start the chat animation
+  const startChatAnimation = () => {
+    setAnimationStarted(true);
+    let timeouts: NodeJS.Timeout[] = [];
     
+    // Show first message immediately
+    setVisibleMessages([0]);
+
+    // For each subsequent message, set up a timeout for typing and display
     conversation.forEach((_, index) => {
+      if (index === 0) return; // Skip the first message as it's shown immediately
+      
       const delay = conversation[index].delay;
       
-      // For each message, set up a timeout to show typing indicator
-      currentTimeout = setTimeout(() => {
+      // First show typing indicator
+      const typingTimeout = setTimeout(() => {
         setTypingIndex(index);
         
         // After a brief typing period, show the message and remove typing indicator
-        setTimeout(() => {
+        const messageTimeout = setTimeout(() => {
           setVisibleMessages(prev => [...prev, index]);
           setTypingIndex(null);
-        }, 1000); // Typing time before message appears
+        }, 800); // Typing time before message appears
+        
+        timeouts.push(messageTimeout);
       }, delay);
+      
+      timeouts.push(typingTimeout);
     });
     
-    // Cleanup timeouts
+    // Cleanup function to clear all timeouts
     return () => {
-      if (currentTimeout) clearTimeout(currentTimeout);
+      timeouts.forEach(timeout => clearTimeout(timeout));
     };
-  }, []);
+  };
 
   return (
     <div className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
@@ -117,7 +163,7 @@ const HeroSection = () => {
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[9/16] bg-black border border-white/20 rounded-xl overflow-hidden gradient-border animate-fade-in">
+            <div ref={chatRef} className="relative w-full max-w-md aspect-[9/16] bg-black border border-white/20 rounded-xl overflow-hidden gradient-border animate-fade-in">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000')] bg-cover bg-center opacity-20"></div>
               
               {/* WhatsApp-like header */}
@@ -141,7 +187,7 @@ const HeroSection = () => {
                       className={`${message.role === "client" 
                         ? "ml-auto bg-neonBlue/10 backdrop-blur-sm rounded-lg rounded-br-none" 
                         : "bg-whatsapp/10 backdrop-blur-sm rounded-lg rounded-bl-none w-4/5"} 
-                        p-3 text-sm animate-fade-in`}
+                        p-3 text-sm animate-bubble-in`}
                     >
                       {message.message}
                     </div>
