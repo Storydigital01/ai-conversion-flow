@@ -36,16 +36,16 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           <a href="#how-it-works" className="text-white/80 hover:text-white transition-colors">
-            How It Works
+            Como Funciona
           </a>
           <a href="#comparison" className="text-white/80 hover:text-white transition-colors">
-            Why AI?
+            Por Que IA?
           </a>
           <a href="#testimonials" className="text-white/80 hover:text-white transition-colors">
-            Testimonials
+            Depoimentos
           </a>
           <a href="#contact" className="btn-whatsapp">
-            Start Now
+            Começar Agora
           </a>
         </div>
         
@@ -64,28 +64,28 @@ const Navbar = () => {
               className="text-white/80 hover:text-white py-2 transition-colors"
               onClick={toggleMenu}
             >
-              How It Works
+              Como Funciona
             </a>
             <a 
               href="#comparison" 
               className="text-white/80 hover:text-white py-2 transition-colors"
               onClick={toggleMenu}
             >
-              Why AI?
+              Por Que IA?
             </a>
             <a 
               href="#testimonials" 
               className="text-white/80 hover:text-white py-2 transition-colors"
               onClick={toggleMenu}
             >
-              Testimonials
+              Depoimentos
             </a>
             <a 
               href="#contact" 
               className="btn-whatsapp w-full flex justify-center"
               onClick={toggleMenu}
             >
-              Start Now
+              Começar Agora
             </a>
           </div>
         </div>

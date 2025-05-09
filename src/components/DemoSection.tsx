@@ -8,25 +8,25 @@ const DemoSection = () => {
     { 
       role: "client", 
       type: "audio",
-      message: "Hi, I saw the harmonization ad and wanted to ask if you also do chin filler?",
+      message: "Oi, vi o anúncio de harmonização e queria perguntar se vocês também fazem preenchimento no queixo?",
       time: "14:32"
     },
     { 
       role: "ai", 
       type: "audio",
-      message: "Yes! Chin filler is one of the most popular procedures. Would you like me to explain how it works or schedule a consultation?",
+      message: "Sim! Preenchimento no queixo é um dos procedimentos mais populares. Gostaria que eu explicasse como funciona ou quer agendar uma consulta?",
       time: "14:32"
     },
     { 
       role: "client", 
       type: "text",
-      message: "Please explain first.",
+      message: "Por favor, explique primeiro.",
       time: "14:33"
     },
     { 
       role: "ai", 
       type: "text",
-      message: "Of course! It's quick and looks very natural. Do you have a reference photo or want me to send you examples?",
+      message: "Claro! É rápido e fica muito natural. Você tem alguma foto de referência ou quer que eu te envie exemplos?",
       time: "14:33"
     }
   ];
@@ -49,17 +49,17 @@ const DemoSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            See Our <span className="gradient-text">IA de Conversão</span> in Action
+            Veja Nossa <span className="gradient-text">IA de Conversão</span> em Ação
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Watch more ways our AI handles real client conversations and converts leads into customers
+            Veja como nossa IA lida com conversas reais de clientes e converte leads em clientes
           </p>
         </div>
         
         {/* Adaptive AI Feature Box - Added before the chat demo */}
         <div className="max-w-4xl mx-auto mb-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 gradient-border">
           <h3 className="text-2xl font-bold mb-4 text-center">
-            The AI <span className="gradient-text">adapts</span> to your lead's behavior
+            A IA <span className="gradient-text">se adapta</span> ao comportamento do seu lead
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 mt-8">
@@ -68,8 +68,8 @@ const DemoSection = () => {
                 <Headphones size={24} className="text-whatsapp" />
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-2">Audio Responses</h4>
-                <p className="text-white/70">If they send a voice message, it replies with audio, maintaining the conversation flow they prefer.</p>
+                <h4 className="text-lg font-semibold mb-2">Respostas em Áudio</h4>
+                <p className="text-white/70">Se eles enviam uma mensagem de voz, ela responde com áudio, mantendo o fluxo de conversa que eles preferem.</p>
               </div>
             </div>
             
@@ -78,14 +78,14 @@ const DemoSection = () => {
                 <Keyboard size={24} className="text-neonBlue" />
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-2">Text Responses</h4>
-                <p className="text-white/70">If they type, it replies with text, matching their communication style automatically.</p>
+                <h4 className="text-lg font-semibold mb-2">Respostas em Texto</h4>
+                <p className="text-white/70">Se eles digitam, ela responde com texto, adaptando-se automaticamente ao estilo de comunicação deles.</p>
               </div>
             </div>
           </div>
           
           <p className="text-center text-lg mt-8 text-white/80">
-            Real intelligence is communicating the way your customer expects.
+            Inteligência real é se comunicar da maneira que seu cliente espera.
           </p>
         </div>
         
@@ -119,7 +119,7 @@ const DemoSection = () => {
                         <AudioWaveform size={16} className="text-white/80" />
                       )}
                       <span className="text-xs text-white/80">
-                        {message.role === "client" ? "Audio message received" : "Audio reply sent"}
+                        {message.role === "client" ? "Mensagem de áudio recebida" : "Resposta em áudio enviada"}
                       </span>
                     </div>
                   ) : null}
@@ -134,14 +134,14 @@ const DemoSection = () => {
         
         <div className="text-center mt-10">
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-6">
-            Your business could be converting leads into customers around the clock, even when you're sleeping.
+            Seu negócio poderia estar convertendo leads em clientes 24 horas por dia, mesmo enquanto você dorme.
           </p>
           <a href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
              className="btn-whatsapp inline-flex"
              target="_blank"
              rel="noopener noreferrer">
             <MessageSquare size={20} />
-            <span>I want a Conversion AI for my business</span>
+            <span>Quero uma IA de Conversão para minha empresa</span>
           </a>
         </div>
       </div>

@@ -8,10 +8,10 @@ const ComparisonSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            A person or <span className="gradient-text">IA de Conversão</span>? See who delivers more.
+            Uma pessoa ou <span className="gradient-text">IA de Conversão</span>? Veja quem entrega mais.
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Compare performance metrics and see why businesses are switching to AI.
+            Compare métricas de desempenho e veja por que as empresas estão mudando para IA.
           </p>
         </div>
         
@@ -25,40 +25,40 @@ const ComparisonSection = () => {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold">Employee</h3>
+              <h3 className="text-2xl font-bold">Funcionário</h3>
             </div>
             
             <div className="space-y-6">
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Response Time</span>
-                <span className="text-white/70">4+ hours on average</span>
+                <span>Tempo de Resposta</span>
+                <span className="text-white/70">+4 horas em média</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Availability</span>
-                <span className="text-white/70">Business hours only</span>
+                <span>Disponibilidade</span>
+                <span className="text-white/70">Apenas horário comercial</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Simultaneous Conversations</span>
-                <span className="text-white/70">1-3 per person</span>
+                <span>Conversas Simultâneas</span>
+                <span className="text-white/70">1-3 por pessoa</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Monthly Cost</span>
-                <span className="text-white/70">R$3,000+ per person</span>
+                <span>Custo Mensal</span>
+                <span className="text-white/70">R$3.000+ por pessoa</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Consistent Performance</span>
+                <span>Desempenho Consistente</span>
                 <span><X size={20} className="text-red-500" /></span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>24/7 Availability</span>
+                <span>Disponibilidade 24/7</span>
                 <span><X size={20} className="text-red-500" /></span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Zero Sick Days</span>
+                <span>Zero Dias de Doença</span>
                 <span><X size={20} className="text-red-500" /></span>
               </div>
               <div className="flex justify-between items-center pb-4">
-                <span>Scales With Demand</span>
+                <span>Escala com Demanda</span>
                 <span><X size={20} className="text-red-500" /></span>
               </div>
             </div>
@@ -67,7 +67,7 @@ const ComparisonSection = () => {
           {/* AI Side */}
           <div className="card border-whatsapp relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-whatsapp text-black text-xs font-bold py-1 px-3 rounded-bl-lg">
-              RECOMMENDED
+              RECOMENDADO
             </div>
             
             <div className="text-center mb-8">
@@ -83,35 +83,35 @@ const ComparisonSection = () => {
             
             <div className="space-y-6">
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Response Time</span>
-                <span className="text-whatsapp font-medium">Instant (seconds)</span>
+                <span>Tempo de Resposta</span>
+                <span className="text-whatsapp font-medium">Instantâneo (segundos)</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Availability</span>
+                <span>Disponibilidade</span>
                 <span className="text-whatsapp font-medium">24/7/365</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Simultaneous Conversations</span>
-                <span className="text-whatsapp font-medium">Unlimited</span>
+                <span>Conversas Simultâneas</span>
+                <span className="text-whatsapp font-medium">Ilimitadas</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Monthly Cost</span>
-                <span className="text-whatsapp font-medium">Up to 10x lower</span>
+                <span>Custo Mensal</span>
+                <span className="text-whatsapp font-medium">Até 10x menor</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Consistent Performance</span>
+                <span>Desempenho Consistente</span>
                 <span><Check size={20} className="text-whatsapp" /></span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>24/7 Availability</span>
+                <span>Disponibilidade 24/7</span>
                 <span><Check size={20} className="text-whatsapp" /></span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span>Zero Sick Days</span>
+                <span>Zero Dias de Doença</span>
                 <span><Check size={20} className="text-whatsapp" /></span>
               </div>
               <div className="flex justify-between items-center pb-4">
-                <span>Scales With Demand</span>
+                <span>Escala com Demanda</span>
                 <span><Check size={20} className="text-whatsapp" /></span>
               </div>
             </div>
@@ -119,7 +119,7 @@ const ComparisonSection = () => {
             <div className="mt-8 pt-6 border-t border-white/10">
               <a href="#contact" className="btn-whatsapp w-full">
                 <MessageSquare size={20} />
-                <span>Get Your IA de Conversão</span>
+                <span>Obtenha sua IA de Conversão</span>
               </a>
             </div>
           </div>

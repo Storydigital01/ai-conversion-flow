@@ -8,10 +8,10 @@ const HowItWorksSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How Our <span className="gradient-text">Conversion AI</span> Works
+            Como Nossa <span className="gradient-text">IA de Conversão</span> Funciona
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            We handle everything. You just enjoy more sales and satisfied customers.
+            Nós cuidamos de tudo. Você só aproveita mais vendas e clientes satisfeitos.
           </p>
         </div>
         
@@ -22,9 +22,9 @@ const HowItWorksSection = () => {
                 <span className="text-whatsapp font-bold">1</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">We Build Your Custom AI Agent</h3>
+                <h3 className="text-xl font-bold mb-2">Construímos Seu Agente de IA Personalizado</h3>
                 <p className="text-white/70">
-                  We create a personalized AI agent that understands your business, products, services, and common customer questions.
+                  Criamos um agente de IA personalizado que entende seu negócio, produtos, serviços e perguntas comuns dos clientes.
                 </p>
               </div>
             </div>
@@ -34,9 +34,9 @@ const HowItWorksSection = () => {
                 <span className="text-whatsapp font-bold">2</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">We Train It With Your Data</h3>
+                <h3 className="text-xl font-bold mb-2">Treinamos com Seus Dados</h3>
                 <p className="text-white/70">
-                  Using your product information, FAQs, and sales scripts, we train your AI to respond like your best sales representative.
+                  Usando suas informações de produtos, FAQs e scripts de vendas, treinamos sua IA para responder como seu melhor representante de vendas.
                 </p>
               </div>
             </div>
@@ -46,9 +46,9 @@ const HowItWorksSection = () => {
                 <span className="text-whatsapp font-bold">3</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">We Deploy It to Your WhatsApp</h3>
+                <h3 className="text-xl font-bold mb-2">Implementamos no Seu WhatsApp</h3>
                 <p className="text-white/70">
-                  We connect the AI to your business WhatsApp account, ready to engage with customers 24/7.
+                  Conectamos a IA à sua conta comercial do WhatsApp, pronta para interagir com clientes 24/7.
                 </p>
               </div>
             </div>
@@ -58,58 +58,58 @@ const HowItWorksSection = () => {
                 <span className="text-whatsapp font-bold">4</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">We Monitor & Improve It</h3>
+                <h3 className="text-xl font-bold mb-2">Monitoramos e Melhoramos</h3>
                 <p className="text-white/70">
-                  We continuously optimize your AI's performance based on real conversations and results.
+                  Otimizamos continuamente o desempenho da sua IA com base em conversas reais e resultados.
                 </p>
               </div>
             </div>
           </div>
           
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 space-y-6 gradient-border">
-            <h3 className="text-2xl font-bold mb-6">What You Get:</h3>
+            <h3 className="text-2xl font-bold mb-6">O Que Você Recebe:</h3>
             
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>AI agent that responds instantly to inquiries 24/7/365</p>
+                <p>Agente de IA que responde instantaneamente 24/7/365</p>
               </div>
               
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>Custom training based on your products and services</p>
+                <p>Treinamento personalizado baseado nos seus produtos e serviços</p>
               </div>
               
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>Seamless WhatsApp integration with your business account</p>
+                <p>Integração perfeita com o WhatsApp da sua empresa</p>
               </div>
               
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>Human-like conversations that build trust with customers</p>
+                <p>Conversas naturais que constroem confiança com os clientes</p>
               </div>
               
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>Handoff to human agents for complex situations</p>
+                <p>Transferência para atendentes humanos em situações complexas</p>
               </div>
               
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>Monthly performance reports and optimization</p>
+                <p>Relatórios de desempenho mensais e otimização</p>
               </div>
               
               <div className="flex items-start gap-3">
                 <CheckCircle size={20} className="text-whatsapp flex-shrink-0 mt-1" />
-                <p>Zero technical work required from you</p>
+                <p>Zero trabalho técnico necessário da sua parte</p>
               </div>
             </div>
             
             <div className="mt-8 pt-6 border-t border-white/10">
               <a href="#contact" className="btn-whatsapp w-full">
                 <MessageSquare size={20} />
-                <span>Get Started in 48 Hours</span>
+                <span>Comece em 48 Horas</span>
               </a>
             </div>
           </div>

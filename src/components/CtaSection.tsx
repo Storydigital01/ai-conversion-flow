@@ -13,10 +13,10 @@ const CtaSection = () => {
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 md:p-12 max-w-4xl mx-auto gradient-border">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to <span className="gradient-text">increase your sales</span>?
+              Pronto para <span className="gradient-text">aumentar suas vendas</span>?
             </h2>
             <p className="text-lg text-white/70">
-              Get your personalized Conversion AI working for you 24/7
+              Tenha sua IA de Conversão personalizada trabalhando para você 24/7
             </p>
           </div>
           
@@ -28,7 +28,7 @@ const CtaSection = () => {
               className="btn-whatsapp inline-flex text-lg px-10 py-4"
             >
               <MessageSquare size={24} />
-              <span>Activate my AI on WhatsApp now</span>
+              <span>Ativar minha IA no WhatsApp agora</span>
             </a>
           </div>
         </div>

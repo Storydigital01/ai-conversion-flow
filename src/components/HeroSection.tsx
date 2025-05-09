@@ -7,37 +7,37 @@ const HeroSection = () => {
   const conversation = [
     { 
       role: "client", 
-      message: "Hi, I saw the ad about facial harmonization and wanted to know more.",
+      message: "Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.",
       delay: 0 
     },
     { 
       role: "ai", 
-      message: "Hi! So glad you're here 💚",
+      message: "Olá! Que bom que você está aqui 💚",
       delay: 1000 
     },
     { 
       role: "ai", 
-      message: "I'm part of Dr. Renata's team and I can help you out.",
+      message: "Eu faço parte da equipe da Dra. Renata e posso te ajudar.",
       delay: 2000 
     },
     { 
       role: "ai", 
-      message: "Tell me — what bothers you the most about your face today? That'll help me guide you better ✨",
+      message: "Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨",
       delay: 3000 
     },
     { 
       role: "client", 
-      message: "I want to improve my jawline and look less tired.",
+      message: "Quero melhorar meu queixo e parecer menos cansada.",
       delay: 5000 
     },
     { 
       role: "ai", 
-      message: "That's actually one of the most requested treatments at the clinic!",
+      message: "Esse é um dos tratamentos mais solicitados na clínica!",
       delay: 6000 
     },
     { 
       role: "ai", 
-      message: "Would you like me to explain how it works or would you prefer to schedule a consultation with the doctor?",
+      message: "Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?",
       delay: 7000 
     },
   ];
@@ -129,35 +129,35 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2 space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              WhatsApp agents with <span className="text-whatsapp">AI technology</span> that converts
+              Agentes de WhatsApp com <span className="text-whatsapp">tecnologia IA</span> que convertem
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 max-w-xl">
-              We build, train, and deploy AI agents that handle customer service and sales 24/7 — so you never lose another lead.
+              Construímos, treinamos e implementamos agentes de IA que gerenciam atendimento ao cliente e vendas 24/7 — para você nunca mais perder um lead.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#demo" className="btn-whatsapp">
                 <MessageSquare size={20} />
-                <span>See the AI in action</span>
+                <span>Veja a IA em ação</span>
               </a>
               <a href="#how-it-works" className="btn-secondary">
-                Learn how it works
+                Saiba como funciona
               </a>
             </div>
             
             <div className="pt-6 flex flex-col sm:flex-row gap-6 text-white/70">
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-                <span>Ready in 48 hours</span>
+                <span>Pronto em 48 horas</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-                <span>No setup required</span>
+                <span>Sem configuração necessária</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-                <span>24/7 availability</span>
+                <span>Disponível 24/7</span>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ const HeroSection = () => {
                   <MessageSquare size={16} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium">Dr. Renata's Clinic</div>
+                  <div className="text-sm font-medium">Clínica Dra. Renata</div>
                   <div className="text-xs text-white/60">Online</div>
                 </div>
               </div>
@@ -209,7 +209,7 @@ const HeroSection = () => {
               {/* Input field (decoration only) */}
               <div className="absolute inset-x-0 bottom-0 p-3 bg-black/80 flex items-center gap-2">
                 <div className="bg-white/10 rounded-full h-10 flex-grow px-4 text-white/50 flex items-center text-sm">
-                  Type your message...
+                  Digite sua mensagem...
                 </div>
                 <div className="h-10 w-10 bg-whatsapp rounded-full flex items-center justify-center">
                   <MessageSquare size={16} className="text-white" />

@@ -11,37 +11,37 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="text-2xl font-bold gradient-text mb-2">ConversionAI</div>
             <p className="text-white/60 text-sm">
-              AI-powered WhatsApp agents for businesses
+              Agentes de WhatsApp com IA para empresas
             </p>
           </div>
           
           <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
             <a href="#how-it-works" className="text-white/70 hover:text-white transition-colors">
-              How It Works
+              Como Funciona
             </a>
             <a href="#comparison" className="text-white/70 hover:text-white transition-colors">
-              Why AI?
+              Por Que IA?
             </a>
             <a href="#testimonials" className="text-white/70 hover:text-white transition-colors">
-              Testimonials
+              Depoimentos
             </a>
             <a href="#contact" className="text-white/70 hover:text-white transition-colors">
-              Contact
+              Contato
             </a>
           </div>
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            © {currentYear} ConversionAI. All rights reserved.
+            © {currentYear} ConversionAI. Todos os direitos reservados.
           </p>
           
           <div className="flex gap-6">
             <a href="#" className="text-white/60 hover:text-white text-sm">
-              Privacy Policy
+              Política de Privacidade
             </a>
             <a href="#" className="text-white/60 hover:text-white text-sm">
-              Terms of Service
+              Termos de Serviço
             </a>
           </div>
         </div>

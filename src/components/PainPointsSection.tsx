@@ -8,10 +8,10 @@ const PainPointsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Are You <span className="text-red-500">Losing Sales</span> Every Day?
+            Você Está <span className="text-red-500">Perdendo Vendas</span> Todos os Dias?
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Slow response times kill conversions. Customers expect immediate answers, or they'll go elsewhere.
+            Respostas lentas matam conversões. Clientes esperam respostas imediatas, ou procuram outro lugar.
           </p>
         </div>
         
@@ -20,9 +20,9 @@ const PainPointsSection = () => {
             <div className="h-12 w-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6">
               <Clock size={24} className="text-red-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Delayed Responses</h3>
+            <h3 className="text-xl font-bold mb-3">Respostas Atrasadas</h3>
             <p className="text-white/70">
-              The average response time for businesses is 12 hours. By then, 90% of leads have already moved on.
+              O tempo médio de resposta para empresas é de 12 horas. Até lá, 90% dos leads já seguiram em frente.
             </p>
           </div>
           
@@ -30,9 +30,9 @@ const PainPointsSection = () => {
             <div className="h-12 w-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6">
               <MessageSquare size={24} className="text-red-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Missed Messages</h3>
+            <h3 className="text-xl font-bold mb-3">Mensagens Perdidas</h3>
             <p className="text-white/70">
-              Outside of business hours, weekends, and holidays, nobody is there to answer your customers' questions.
+              Fora do horário comercial, fins de semana e feriados, ninguém está lá para responder às perguntas dos seus clientes.
             </p>
           </div>
           
@@ -40,20 +40,20 @@ const PainPointsSection = () => {
             <div className="h-12 w-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6">
               <ThumbsDown size={24} className="text-red-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Lost Sales</h3>
+            <h3 className="text-xl font-bold mb-3">Vendas Perdidas</h3>
             <p className="text-white/70">
-              Every unanswered message is a potential sale lost to a competitor who responded faster.
+              Cada mensagem não respondida é uma venda potencial perdida para um concorrente que respondeu mais rápido.
             </p>
           </div>
         </div>
         
         <div className="mt-16 text-center">
           <p className="text-2xl font-medium mb-6">
-            <span className="gradient-text">What if your business could respond instantly, 24/7?</span>
+            <span className="gradient-text">E se seu negócio pudesse responder instantaneamente, 24/7?</span>
           </p>
           <a href="#demo" className="btn-whatsapp inline-flex">
             <MessageSquare size={20} />
-            <span>See IA de Conversão in Action</span>
+            <span>Veja a IA de Conversão em Ação</span>
           </a>
         </div>
       </div>

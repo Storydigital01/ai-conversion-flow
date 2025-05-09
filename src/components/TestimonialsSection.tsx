@@ -7,19 +7,19 @@ const TestimonialsSection = () => {
     {
       name: "Ana Carolina",
       business: "Clínica Estética Beleza Natural",
-      testimonial: "Since implementing the AI agent, we've increased our appointment bookings by 40%. It responds to clients 24/7 and handles all the basic questions, freeing up our staff for more complex consultations.",
+      testimonial: "Desde que implementamos o agente de IA, aumentamos nossos agendamentos de consultas em 40%. Ele responde aos clientes 24/7 e lida com todas as perguntas básicas, liberando nossa equipe para consultas mais complexas.",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200"
     },
     {
       name: "Rafael Oliveira",
       business: "Tech Gadgets Shop",
-      testimonial: "Our conversion rate has doubled since adding the AI assistant. It answers product questions instantly and helps customers make purchase decisions even at 2 AM when our team is sleeping.",
+      testimonial: "Nossa taxa de conversão dobrou desde que adicionamos o assistente de IA. Ele responde às perguntas sobre produtos instantaneamente e ajuda os clientes a tomarem decisões de compra mesmo às 2h da manhã, quando nossa equipe está dormindo.",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200"
     },
     {
       name: "Márcia Santos",
       business: "Petit Gourmet Restaurant",
-      testimonial: "The AI handles all our reservations now and answers common questions about our menu and special dietary options. This has freed up our staff to focus on providing excellent service to dining guests.",
+      testimonial: "A IA gerencia todas as nossas reservas agora e responde a perguntas comuns sobre nosso cardápio e opções dietéticas especiais. Isso liberou nossa equipe para se concentrar em fornecer um excelente serviço aos clientes no local.",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200"
     }
   ];
@@ -29,10 +29,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Businesses <span className="gradient-text">Transformed</span>
+            Negócios <span className="gradient-text">Transformados</span>
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            See how our AI agents have helped businesses like yours increase sales and improve customer satisfaction.
+            Veja como nossos agentes de IA ajudaram empresas como a sua a aumentar as vendas e melhorar a satisfação do cliente.
           </p>
         </div>
         
@@ -66,11 +66,11 @@ const TestimonialsSection = () => {
         
         <div className="mt-16 text-center">
           <p className="text-xl mb-6">
-            Join hundreds of businesses that have transformed their customer communication
+            Junte-se a centenas de empresas que transformaram sua comunicação com clientes
           </p>
           <a href="#contact" className="btn-whatsapp inline-flex">
             <MessageSquare size={20} />
-            <span>Get Your AI Agent</span>
+            <span>Obtenha seu Agente de IA</span>
           </a>
         </div>
       </div>
