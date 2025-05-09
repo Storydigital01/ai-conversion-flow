@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, Headphones, Keyboard } from 'lucide-react';
 
 const DemoSection = () => {
   // Conversation data for demonstration
@@ -59,6 +59,39 @@ const DemoSection = () => {
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             Watch more ways our AI handles real client conversations and converts leads into customers
+          </p>
+        </div>
+        
+        {/* Adaptive AI Feature Box - Added before the chat demo */}
+        <div className="max-w-4xl mx-auto mb-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 gradient-border">
+          <h3 className="text-2xl font-bold mb-4 text-center">
+            The AI <span className="gradient-text">adapts</span> to your lead's behavior
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="flex items-start gap-4">
+              <div className="h-12 w-12 rounded-full bg-whatsapp/20 flex items-center justify-center flex-shrink-0">
+                <Headphones size={24} className="text-whatsapp" />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-2">Audio Responses</h4>
+                <p className="text-white/70">If they send a voice message, it replies with audio, maintaining the conversation flow they prefer.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="h-12 w-12 rounded-full bg-neonBlue/20 flex items-center justify-center flex-shrink-0">
+                <Keyboard size={24} className="text-neonBlue" />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-2">Text Responses</h4>
+                <p className="text-white/70">If they type, it replies with text, matching their communication style automatically.</p>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-center text-lg mt-8 text-white/80">
+            Real intelligence is communicating the way your customer expects.
           </p>
         </div>
         
