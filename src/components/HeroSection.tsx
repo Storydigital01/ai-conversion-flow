@@ -1,8 +1,78 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageSquare } from 'lucide-react';
 
 const HeroSection = () => {
+  // Conversation data
+  const conversation = [
+    { 
+      role: "client", 
+      message: "Hi, I saw the ad about facial harmonization and wanted to know more.",
+      delay: 1000 
+    },
+    { 
+      role: "ai", 
+      message: "Hi! So glad you're here 💚",
+      delay: 2000 
+    },
+    { 
+      role: "ai", 
+      message: "I'm part of Dr. Renata's team and I can help you out.",
+      delay: 3000 
+    },
+    { 
+      role: "ai", 
+      message: "Tell me — what bothers you the most about your face today? That'll help me guide you better ✨",
+      delay: 4000 
+    },
+    { 
+      role: "client", 
+      message: "I want to improve my jawline and look less tired.",
+      delay: 6000 
+    },
+    { 
+      role: "ai", 
+      message: "That's actually one of the most requested treatments at the clinic!",
+      delay: 7000 
+    },
+    { 
+      role: "ai", 
+      message: "Would you like me to explain how it works or would you prefer to schedule a consultation with the doctor?",
+      delay: 8000 
+    },
+  ];
+
+  // State to track which messages have been rendered
+  const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
+  // State to track if a message is currently being typed
+  const [typingIndex, setTypingIndex] = useState<number | null>(null);
+
+  // Animation effect to progressively show messages
+  useEffect(() => {
+    // Start the conversation animation
+    let currentTimeout: NodeJS.Timeout | null = null;
+    
+    conversation.forEach((_, index) => {
+      const delay = conversation[index].delay;
+      
+      // For each message, set up a timeout to show typing indicator
+      currentTimeout = setTimeout(() => {
+        setTypingIndex(index);
+        
+        // After a brief typing period, show the message and remove typing indicator
+        setTimeout(() => {
+          setVisibleMessages(prev => [...prev, index]);
+          setTypingIndex(null);
+        }, 1000); // Typing time before message appears
+      }, delay);
+    });
+    
+    // Cleanup timeouts
+    return () => {
+      if (currentTimeout) clearTimeout(currentTimeout);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
       {/* Background elements */}
@@ -13,20 +83,20 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2 space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              If you take too long to reply on WhatsApp, <span className="text-red-500">your lead is gone.</span>
+              WhatsApp agents with <span className="text-whatsapp">AI technology</span> that converts
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 max-w-xl">
-              Our Conversion AI replies instantly, qualifies leads, and sells for you — 24/7, with no mistakes.
+              We build, train, and deploy AI agents that handle customer service and sales 24/7 — so you never lose another lead.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#demo" className="btn-whatsapp">
                 <MessageSquare size={20} />
-                <span>I want to see the AI in action now</span>
+                <span>See the AI in action</span>
               </a>
               <a href="#how-it-works" className="btn-secondary">
-                See How It Works
+                Learn how it works
               </a>
             </div>
             
@@ -49,28 +119,54 @@ const HeroSection = () => {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md aspect-[9/16] bg-black border border-white/20 rounded-xl overflow-hidden gradient-border animate-fade-in">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000')] bg-cover bg-center opacity-20"></div>
+              
+              {/* WhatsApp-like header */}
               <div className="absolute inset-x-0 top-0 h-14 bg-black/80 border-b border-white/10 flex items-center px-4">
                 <div className="w-8 h-8 rounded-full bg-whatsapp flex items-center justify-center mr-3">
                   <MessageSquare size={16} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium">IA de Conversão</div>
+                  <div className="text-sm font-medium">Dr. Renata's Clinic</div>
                   <div className="text-xs text-white/60">Online</div>
                 </div>
               </div>
               
-              <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col gap-3">
-                <div className="bg-white/10 backdrop-blur-sm p-3 rounded-lg rounded-bl-none w-4/5 text-sm">
-                  Hey there! 👋 I'm your AI assistant. How can I help you today?
+              {/* Chat messages container */}
+              <div className="absolute inset-x-0 bottom-0 top-14 p-4 flex flex-col gap-3 overflow-y-auto pb-20">
+                {visibleMessages.map((index) => {
+                  const message = conversation[index];
+                  return (
+                    <div 
+                      key={index} 
+                      className={`${message.role === "client" 
+                        ? "ml-auto bg-neonBlue/10 backdrop-blur-sm rounded-lg rounded-br-none" 
+                        : "bg-whatsapp/10 backdrop-blur-sm rounded-lg rounded-bl-none w-4/5"} 
+                        p-3 text-sm animate-fade-in`}
+                    >
+                      {message.message}
+                    </div>
+                  );
+                })}
+                
+                {/* Typing indicator */}
+                {typingIndex !== null && (
+                  <div className="bg-whatsapp/10 backdrop-blur-sm p-3 rounded-lg rounded-bl-none w-4/5 text-sm">
+                    <div className="flex gap-1">
+                      <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse"></div>
+                      <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                      <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              {/* Input field (decoration only) */}
+              <div className="absolute inset-x-0 bottom-0 p-3 bg-black/80 flex items-center gap-2">
+                <div className="bg-white/10 rounded-full h-10 flex-grow px-4 text-white/50 flex items-center text-sm">
+                  Type your message...
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-3 rounded-lg rounded-bl-none w-4/5 text-sm">
-                  I can answer questions about your products, help with orders, or schedule appointments 24/7!
-                </div>
-                <div className="bg-neonBlue/10 backdrop-blur-sm p-3 rounded-lg rounded-br-none ml-auto text-sm">
-                  Hi! Do you have the black sneakers in size 42?
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm p-3 rounded-lg rounded-bl-none w-4/5 text-sm animate-pulse-light">
-                  Yes, we have them in stock! Would you like me to place an order for you?
+                <div className="h-10 w-10 bg-whatsapp rounded-full flex items-center justify-center">
+                  <MessageSquare size={16} className="text-white" />
                 </div>
               </div>
             </div>

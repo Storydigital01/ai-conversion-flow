@@ -15,7 +15,7 @@ const DemoSection = () => {
             See Our <span className="gradient-text">IA de Conversão</span> in Action
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Watch how our AI handles real client conversations and converts leads into customers
+            Watch more ways our AI handles real client conversations and converts leads into customers
           </p>
         </div>
         

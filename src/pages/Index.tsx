@@ -27,7 +27,7 @@ const Index = () => {
       <CtaSection />
       <Footer />
       
-      {/* Fixed WhatsApp Button */}
+      {/* Fixed WhatsApp Button for mobile */}
       {isMobile && (
         <a 
           href="https://wa.me/5511999999999" 
