@@ -22,13 +22,13 @@ const CtaSection = () => {
           
           <div className="text-center">
             <a 
-              href="https://wa.me/5511999999999" 
+              href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-whatsapp inline-flex text-lg px-10 py-4"
             >
               <MessageSquare size={24} />
-              <span>I want a Conversion AI selling for me on WhatsApp now</span>
+              <span>Activate my AI on WhatsApp now</span>
             </a>
           </div>
         </div>

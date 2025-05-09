@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { MessageSquare } from 'lucide-react';
 
 const DemoSection = () => {
@@ -37,77 +37,6 @@ const DemoSection = () => {
     }
   ];
 
-  // States for the animated conversation
-  const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
-  const [typingIndex, setTypingIndex] = useState<number | null>(null);
-  const [animationStarted, setAnimationStarted] = useState(false);
-  const chatRef = useRef<HTMLDivElement>(null);
-
-  // Function to check if element is in viewport
-  const isInViewport = (element: HTMLElement): boolean => {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.7
-    );
-  };
-
-  // Handle scroll event to trigger animation
-  useEffect(() => {
-    const handleScroll = () => {
-      if (chatRef.current && !animationStarted) {
-        if (isInViewport(chatRef.current)) {
-          startChatAnimation();
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    // Check initial position
-    if (chatRef.current && !animationStarted) {
-      if (isInViewport(chatRef.current)) {
-        startChatAnimation();
-      }
-    }
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [animationStarted]);
-
-  // Function to start the chat animation
-  const startChatAnimation = () => {
-    setAnimationStarted(true);
-    let timeouts: NodeJS.Timeout[] = [];
-    
-    // First message appears immediately
-    setVisibleMessages([0]);
-    
-    // Loop through remaining messages and create timeouts
-    conversation.forEach((_, index) => {
-      if (index === 0) return; // Skip first message
-      
-      const typingTimeout = setTimeout(() => {
-        setTypingIndex(index);
-        
-        // After typing animation, show the message
-        const messageTimeout = setTimeout(() => {
-          setVisibleMessages(prev => [...prev, index]);
-          setTypingIndex(null);
-        }, 800);
-        
-        timeouts.push(messageTimeout);
-      }, index * 1500); // Increase delay based on message index
-      
-      timeouts.push(typingTimeout);
-    });
-    
-    // Cleanup function
-    return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout));
-    };
-  };
-
   // Format message with line breaks
   const formatMessage = (message: string) => {
     return message.split('\n\n').map((paragraph, i) => (
@@ -133,7 +62,7 @@ const DemoSection = () => {
           </p>
         </div>
         
-        <div ref={chatRef} className="max-w-lg mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden gradient-border">
+        <div className="max-w-lg mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden gradient-border">
           {/* WhatsApp header */}
           <div className="bg-whatsapp/10 border-b border-white/10 p-4 flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-gradient-to-r from-whatsapp to-neonBlue flex items-center justify-center">
@@ -145,37 +74,21 @@ const DemoSection = () => {
             </div>
           </div>
           
-          {/* Chat messages */}
+          {/* Chat messages - all visible by default */}
           <div className="p-4 space-y-4">
-            {visibleMessages.map((index) => {
-              const message = conversation[index];
-              return (
-                <div key={index} className="flex justify-end">
-                  <div 
-                    className={`${message.role === "client" 
-                      ? "bg-neonBlue/20 rounded-lg rounded-br-none ml-auto" 
-                      : "bg-whatsapp/20 rounded-lg rounded-bl-none mr-auto"} 
-                      p-3 max-w-[80%] animate-bubble-in`}
-                  >
-                    {formatMessage(message.message)}
-                    <p className="text-xs text-white/60 mt-1 text-right">{message.time}</p>
-                  </div>
-                </div>
-              );
-            })}
-            
-            {/* Typing indicator */}
-            {typingIndex !== null && (
-              <div className="flex justify-start">
-                <div className="bg-whatsapp/20 rounded-lg rounded-bl-none p-3 max-w-[80%]">
-                  <div className="flex gap-1">
-                    <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse"></div>
-                    <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                    <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                  </div>
+            {conversation.map((message, index) => (
+              <div key={index} className="flex justify-end">
+                <div 
+                  className={`${message.role === "client" 
+                    ? "bg-neonBlue/20 rounded-lg rounded-br-none ml-auto" 
+                    : "bg-whatsapp/20 rounded-lg rounded-bl-none mr-auto"} 
+                    p-3 max-w-[80%]`}
+                >
+                  {formatMessage(message.message)}
+                  <p className="text-xs text-white/60 mt-1 text-right">{message.time}</p>
                 </div>
               </div>
-            )}
+            ))}
           </div>
         </div>
         
@@ -183,7 +96,10 @@ const DemoSection = () => {
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-6">
             Your business could be converting leads into customers around the clock, even when you're sleeping.
           </p>
-          <a href="#contact" className="btn-whatsapp inline-flex">
+          <a href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
+             className="btn-whatsapp inline-flex"
+             target="_blank"
+             rel="noopener noreferrer">
             <MessageSquare size={20} />
             <span>I want a Conversion AI for my business</span>
           </a>
