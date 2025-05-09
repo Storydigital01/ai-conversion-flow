@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquare, Headphones, AudioWaveform, Mic } from 'lucide-react';
+import { MessageSquare, Headphones, AudioWaveform, Mic, Keyboard } from 'lucide-react';
 
 const DemoSection = () => {
   // Conversation data for demonstration - now with audio messages
