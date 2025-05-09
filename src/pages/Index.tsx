@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import PainPointsSection from '@/components/PainPointsSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
+import ComparisonSection from '@/components/ComparisonSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import CtaSection from '@/components/CtaSection';
+import Footer from '@/components/Footer';
+import { WhatsApp } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-black min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <PainPointsSection />
+      <HowItWorksSection />
+      <ComparisonSection />
+      <TestimonialsSection />
+      <CtaSection />
+      <Footer />
+      
+      {/* Fixed WhatsApp Button */}
+      <a 
+        href="#contact" 
+        className="fixed bottom-6 right-6 z-50 bg-whatsapp text-white p-4 rounded-full shadow-lg hover:bg-opacity-90 transition-colors"
+        aria-label="Contact via WhatsApp"
+      >
+        <WhatsApp size={24} />
+      </a>
     </div>
   );
 };
