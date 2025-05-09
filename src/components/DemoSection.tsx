@@ -1,39 +1,33 @@
 
 import React from 'react';
-import { MessageSquare, Headphones, Keyboard } from 'lucide-react';
+import { MessageSquare, Headphones, AudioWaveform, Mic } from 'lucide-react';
 
 const DemoSection = () => {
-  // Conversation data for demonstration
+  // Conversation data for demonstration - now with audio messages
   const conversation = [
     { 
       role: "client", 
-      message: "Hi, I saw the ad about facial harmonization and wanted to know more.",
+      type: "audio",
+      message: "Hi, I saw the harmonization ad and wanted to ask if you also do chin filler?",
       time: "14:32"
     },
     { 
       role: "ai", 
-      message: "Hi! So glad you're here 💚 I'm part of Dr. Renata's team and I can help you with that.\n\nJust a quick question — what would you like to improve in your face? That helps me guide you better ✨",
+      type: "audio",
+      message: "Yes! Chin filler is one of the most popular procedures. Would you like me to explain how it works or schedule a consultation?",
       time: "14:32"
     },
     { 
       role: "client", 
-      message: "I want to improve my jawline and look less tired.",
+      type: "text",
+      message: "Please explain first.",
       time: "14:33"
     },
     { 
       role: "ai", 
-      message: "That's one of our most requested treatments!\n\nWould you like me to explain how it works or prefer to schedule a consultation with the doctor?",
+      type: "text",
+      message: "Of course! It's quick and looks very natural. Do you have a reference photo or want me to send you examples?",
       time: "14:33"
-    },
-    { 
-      role: "client", 
-      message: "I'd like to schedule a consultation. Do you have availability this week?",
-      time: "14:34"
-    },
-    { 
-      role: "ai", 
-      message: "Perfect! I can see that Dr. Renata has openings on Thursday at 3:00 PM or Friday at 10:00 AM. Would either of those work for you?",
-      time: "14:34"
     }
   ];
 
@@ -107,7 +101,7 @@ const DemoSection = () => {
             </div>
           </div>
           
-          {/* Chat messages - all visible by default */}
+          {/* Chat messages - now with audio and text messages */}
           <div className="p-4 space-y-4">
             {conversation.map((message, index) => (
               <div key={index} className="flex justify-end">
@@ -117,6 +111,19 @@ const DemoSection = () => {
                     : "bg-whatsapp/20 rounded-lg rounded-bl-none mr-auto"} 
                     p-3 max-w-[80%]`}
                 >
+                  {message.type === "audio" ? (
+                    <div className="flex items-center gap-2 mb-1">
+                      {message.role === "client" ? (
+                        <Mic size={16} className="text-white/80" />
+                      ) : (
+                        <AudioWaveform size={16} className="text-white/80" />
+                      )}
+                      <span className="text-xs text-white/80">
+                        {message.role === "client" ? "Audio message received" : "Audio reply sent"}
+                      </span>
+                    </div>
+                  ) : null}
+                  
                   {formatMessage(message.message)}
                   <p className="text-xs text-white/60 mt-1 text-right">{message.time}</p>
                 </div>
