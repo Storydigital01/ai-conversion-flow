@@ -13,10 +13,10 @@ const CtaSection = () => {
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 md:p-12 max-w-4xl mx-auto gradient-border">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to <span className="gradient-text">Never Miss a Sale</span> Again?
+              Ready to <span className="gradient-text">increase your sales</span>?
             </h2>
             <p className="text-lg text-white/70">
-              Get your custom IA de Conversão up and running in just 48 hours
+              Get your personalized Conversion AI working for you 24/7
             </p>
           </div>
           
