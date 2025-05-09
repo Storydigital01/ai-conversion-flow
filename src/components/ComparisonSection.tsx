@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, MessageSquare } from 'lucide-react';
 
 const ComparisonSection = () => {
   return (
@@ -118,7 +118,7 @@ const ComparisonSection = () => {
             
             <div className="mt-8 pt-6 border-t border-white/10">
               <a href="#contact" className="btn-whatsapp w-full">
-                <WhatsApp size={20} />
+                <MessageSquare size={20} />
                 <span>Get Your AI Assistant</span>
               </a>
             </div>

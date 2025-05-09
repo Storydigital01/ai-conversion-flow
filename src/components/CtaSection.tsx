@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { WhatsApp, ArrowRight, Send } from 'lucide-react';
+import { MessageSquare, ArrowRight, Send } from 'lucide-react';
 
 const CtaSection = () => {
   return (
@@ -80,7 +80,7 @@ const CtaSection = () => {
                 className="flex items-center gap-3 group"
               >
                 <div className="h-12 w-12 bg-whatsapp rounded-full flex items-center justify-center">
-                  <WhatsApp size={24} className="text-white" />
+                  <MessageSquare size={24} className="text-white" />
                 </div>
                 <div>
                   <p className="font-medium group-hover:underline">Chat on WhatsApp</p>

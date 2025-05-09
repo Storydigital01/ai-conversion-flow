@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Star } from 'lucide-react';
+import { Star, MessageSquare } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
             Join hundreds of businesses that have transformed their customer communication
           </p>
           <a href="#contact" className="btn-whatsapp inline-flex">
-            <WhatsApp size={20} />
+            <MessageSquare size={20} />
             <span>Get Your AI Agent</span>
           </a>
         </div>

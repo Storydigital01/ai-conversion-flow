@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, MessageSquare, ThumbsDown, WhatsApp } from 'lucide-react';
+import { Clock, MessageSquare, ThumbsDown } from 'lucide-react';
 
 const PainPointsSection = () => {
   return (
@@ -52,7 +52,7 @@ const PainPointsSection = () => {
             <span className="gradient-text">What if your business could respond instantly, 24/7?</span>
           </p>
           <a href="#contact" className="btn-whatsapp inline-flex">
-            <WhatsApp size={20} />
+            <MessageSquare size={20} />
             <span>Get Your AI Agent Now</span>
           </a>
         </div>

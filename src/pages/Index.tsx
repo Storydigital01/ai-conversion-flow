@@ -8,7 +8,7 @@ import ComparisonSection from '@/components/ComparisonSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
-import { WhatsApp } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -28,7 +28,7 @@ const Index = () => {
         className="fixed bottom-6 right-6 z-50 bg-whatsapp text-white p-4 rounded-full shadow-lg hover:bg-opacity-90 transition-colors"
         aria-label="Contact via WhatsApp"
       >
-        <WhatsApp size={24} />
+        <MessageSquare size={24} />
       </a>
     </div>
   );

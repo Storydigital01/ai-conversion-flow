@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { WhatsApp } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="btn-whatsapp">
-                <WhatsApp size={20} />
+                <MessageSquare size={20} />
                 <span>Get Your AI Agent</span>
               </a>
               <a href="#how-it-works" className="btn-secondary">
@@ -51,7 +51,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000')] bg-cover bg-center opacity-20"></div>
               <div className="absolute inset-x-0 top-0 h-14 bg-black/80 border-b border-white/10 flex items-center px-4">
                 <div className="w-8 h-8 rounded-full bg-whatsapp flex items-center justify-center mr-3">
-                  <WhatsApp size={16} className="text-white" />
+                  <MessageSquare size={16} className="text-white" />
                 </div>
                 <div>
                   <div className="text-sm font-medium">Your AI Assistant</div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CheckCircle, WhatsApp } from 'lucide-react';
+import { CheckCircle, MessageSquare } from 'lucide-react';
 
 const HowItWorksSection = () => {
   return (
@@ -108,7 +108,7 @@ const HowItWorksSection = () => {
             
             <div className="mt-8 pt-6 border-t border-white/10">
               <a href="#contact" className="btn-whatsapp w-full">
-                <WhatsApp size={20} />
+                <MessageSquare size={20} />
                 <span>Get Started in 48 Hours</span>
               </a>
             </div>
