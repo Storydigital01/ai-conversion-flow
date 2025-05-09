@@ -13,17 +13,17 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2 space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              AI-Powered WhatsApp Agents That <span className="gradient-text">Convert</span>
+              If you take too long to reply on WhatsApp, <span className="text-red-500">your lead is gone.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 max-w-xl">
-              We build, train, and deploy AI agents that handle your customer service and sales 24/7, so you never miss another lead.
+              Our Conversion AI replies instantly, qualifies leads, and sells for you — 24/7, with no mistakes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="btn-whatsapp">
+              <a href="#demo" className="btn-whatsapp">
                 <MessageSquare size={20} />
-                <span>Get Your AI Agent</span>
+                <span>I want to see the AI in action now</span>
               </a>
               <a href="#how-it-works" className="btn-secondary">
                 See How It Works
@@ -54,7 +54,7 @@ const HeroSection = () => {
                   <MessageSquare size={16} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium">Your AI Assistant</div>
+                  <div className="text-sm font-medium">IA de Conversão</div>
                   <div className="text-xs text-white/60">Online</div>
                 </div>
               </div>

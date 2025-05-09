@@ -8,10 +8,10 @@ const ComparisonSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            AI vs Human: <span className="gradient-text">The Numbers</span>
+            A person or <span className="gradient-text">IA de Conversão</span>? See who delivers more.
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            See why AI agents outperform traditional customer service in every metric that matters.
+            Compare performance metrics and see why businesses are switching to AI.
           </p>
         </div>
         
@@ -25,7 +25,7 @@ const ComparisonSection = () => {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold">Human Staff</h3>
+              <h3 className="text-2xl font-bold">Employee</h3>
             </div>
             
             <div className="space-y-6">
@@ -39,11 +39,11 @@ const ComparisonSection = () => {
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
                 <span>Simultaneous Conversations</span>
-                <span className="text-white/70">1-3 per agent</span>
+                <span className="text-white/70">1-3 per person</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
                 <span>Monthly Cost</span>
-                <span className="text-white/70">R$3,000+ per agent</span>
+                <span className="text-white/70">R$3,000+ per person</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
                 <span>Consistent Performance</span>
@@ -78,7 +78,7 @@ const ComparisonSection = () => {
                   <path d="M9 12h6"></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold">AI Assistant</h3>
+              <h3 className="text-2xl font-bold">IA de Conversão</h3>
             </div>
             
             <div className="space-y-6">
@@ -96,7 +96,7 @@ const ComparisonSection = () => {
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
                 <span>Monthly Cost</span>
-                <span className="text-whatsapp font-medium">Starting at R$997</span>
+                <span className="text-whatsapp font-medium">Up to 10x lower</span>
               </div>
               <div className="flex justify-between items-center border-b border-white/10 pb-4">
                 <span>Consistent Performance</span>
@@ -119,7 +119,7 @@ const ComparisonSection = () => {
             <div className="mt-8 pt-6 border-t border-white/10">
               <a href="#contact" className="btn-whatsapp w-full">
                 <MessageSquare size={20} />
-                <span>Get Your AI Assistant</span>
+                <span>Get Your IA de Conversão</span>
               </a>
             </div>
           </div>

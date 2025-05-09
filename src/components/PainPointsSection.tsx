@@ -51,9 +51,9 @@ const PainPointsSection = () => {
           <p className="text-2xl font-medium mb-6">
             <span className="gradient-text">What if your business could respond instantly, 24/7?</span>
           </p>
-          <a href="#contact" className="btn-whatsapp inline-flex">
+          <a href="#demo" className="btn-whatsapp inline-flex">
             <MessageSquare size={20} />
-            <span>Get Your AI Agent Now</span>
+            <span>See IA de Conversão in Action</span>
           </a>
         </div>
       </div>
