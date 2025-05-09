@@ -29,16 +29,18 @@ const Index = () => {
       
       {/* Fixed WhatsApp Button for mobile */}
       {isMobile && (
-        <a 
-          href="https://wa.me/5511999999999" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="fixed bottom-6 left-4 right-4 z-50 bg-whatsapp text-white py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
-          aria-label="Contact via WhatsApp"
-        >
-          <MessageSquare size={24} />
-          <span className="font-medium">I want a Conversion AI selling for me on WhatsApp now</span>
-        </a>
+        <div className="fixed bottom-6 left-0 right-0 z-50 px-4 flex justify-center">
+          <a 
+            href="https://wa.me/5511999999999" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-whatsapp text-white py-5 px-6 rounded-xl shadow-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-3 w-full max-w-md animate-pulse-light"
+            aria-label="Contact via WhatsApp"
+          >
+            <MessageSquare className="h-6 w-6 animate-pulse-light" />
+            <span className="font-bold text-lg">Quero uma IA de conversão vendendo para mim no WhatsApp agora</span>
+          </a>
+        </div>
       )}
     </div>
   );
