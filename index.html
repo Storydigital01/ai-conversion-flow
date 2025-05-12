@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ConversionAI - Agentes de WhatsApp com IA</title>
-  
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -19,30 +18,19 @@
   fbq('init', '956654252730798');
   fbq('track', 'PageView');
   </script>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
   <style>
-    /* Reset and base styles */
+    /* Base styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    
-    html {
-      scroll-behavior: smooth;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: black;
       color: white;
       line-height: 1.5;
-      font-size: 16px;
     }
     
     /* Container */
@@ -51,7 +39,6 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
-      position: relative;
     }
     
     /* Typography */
@@ -63,17 +50,15 @@
     
     h1 {
       font-size: 2.5rem;
-      line-height: 1.2;
     }
     
     h2 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     
     p {
-      margin-bottom: 1.25rem;
-      line-height: 1.6;
+      margin-bottom: 1rem;
     }
     
     /* Sections */
@@ -86,11 +71,6 @@
     a {
       color: white;
       text-decoration: none;
-      transition: color 0.2s;
-    }
-    
-    a:hover {
-      color: #25D366;
     }
     
     .btn {
@@ -101,17 +81,12 @@
       padding: 0.75rem 1.5rem;
       border-radius: 0.375rem;
       font-weight: 500;
-      transition: all 0.2s;
+      transition: opacity 0.2s;
       cursor: pointer;
-      text-align: center;
-      border: none;
-      line-height: 1.4;
-      font-size: 1rem;
     }
     
     .btn:hover {
       opacity: 0.9;
-      color: white;
     }
     
     .btn-whatsapp {
@@ -123,7 +98,6 @@
       border: 2px solid rgba(255, 255, 255, 0.2);
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
-      color: white;
     }
     
     /* Cards */
@@ -134,7 +108,6 @@
       border-radius: 0.75rem;
       padding: 1.5rem;
       transition: all 0.3s;
-      margin-bottom: 1.5rem;
     }
     
     .card:hover {
@@ -185,7 +158,7 @@
       background-color: #00bfff;
     }
     
-    /* Layout utilities */
+    /* Layout */
     .flex {
       display: flex;
     }
@@ -206,10 +179,6 @@
       justify-content: space-between;
     }
     
-    .gap-2 {
-      gap: 0.5rem;
-    }
-    
     .gap-4 {
       gap: 1rem;
     }
@@ -220,22 +189,6 @@
     
     .gap-8 {
       gap: 2rem;
-    }
-    
-    .gap-12 {
-      gap: 3rem;
-    }
-    
-    .mb-1 {
-      margin-bottom: 0.25rem;
-    }
-    
-    .mb-2 {
-      margin-bottom: 0.5rem;
-    }
-    
-    .mb-3 {
-      margin-bottom: 0.75rem;
     }
     
     .mb-4 {
@@ -258,10 +211,6 @@
       margin-bottom: 4rem;
     }
     
-    .mt-1 {
-      margin-top: 0.25rem;
-    }
-    
     .mt-4 {
       margin-top: 1rem;
     }
@@ -282,19 +231,6 @@
       margin-top: 4rem;
     }
     
-    .mr-4 {
-      margin-right: 1rem;
-    }
-    
-    .ml-auto {
-      margin-left: auto;
-    }
-    
-    .mx-auto {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
     .p-4 {
       padding: 1rem;
     }
@@ -307,56 +243,8 @@
       padding: 2rem;
     }
     
-    .py-1 {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-    }
-    
-    .py-2 {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-    
-    .py-3 {
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-    }
-    
-    .py-4 {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
-    
-    .px-3 {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-    }
-    
-    .px-4 {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-    
-    .px-8 {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-    
-    .px-10 {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
-    
     .pt-6 {
       padding-top: 1.5rem;
-    }
-    
-    .pt-8 {
-      padding-top: 2rem;
-    }
-    
-    .pt-20 {
-      padding-top: 5rem;
     }
     
     .pb-3 {
@@ -369,22 +257,10 @@
     }
     
     .grid-cols-1 {
-      grid-template-columns: 1fr;
-    }
-    
-    .grid-cols-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .grid-cols-3 {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     
     /* Borders */
-    .border {
-      border: 1px solid;
-    }
-    
     .border-t {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -412,10 +288,6 @@
     
     .text-white {
       color: white;
-    }
-    
-    .text-white\/80 {
-      color: rgba(255, 255, 255, 0.8);
     }
     
     .text-white\/70 {
@@ -462,28 +334,12 @@
       font-size: 2.25rem;
     }
     
-    .text-5xl {
-      font-size: 3rem;
-    }
-    
-    .text-6xl {
-      font-size: 3.75rem;
-    }
-    
     .font-medium {
       font-weight: 500;
     }
     
     .font-bold {
       font-weight: 700;
-    }
-    
-    .font-semibold {
-      font-weight: 600;
-    }
-    
-    .leading-tight {
-      line-height: 1.25;
     }
     
     /* Utilities */
@@ -495,36 +351,8 @@
       position: absolute;
     }
     
-    .fixed {
-      position: fixed;
-    }
-    
-    .top-0 {
-      top: 0;
-    }
-    
-    .top-full {
-      top: 100%;
-    }
-    
-    .left-0 {
-      left: 0;
-    }
-    
-    .right-0 {
-      right: 0;
-    }
-    
-    .bottom-0 {
-      bottom: 0;
-    }
-    
     .z-10 {
       z-index: 10;
-    }
-    
-    .z-20 {
-      z-index: 20;
     }
     
     .z-50 {
@@ -535,16 +363,12 @@
       overflow: hidden;
     }
     
-    .rounded-md {
-      border-radius: 0.375rem;
+    .rounded-xl {
+      border-radius: 0.75rem;
     }
     
     .rounded-lg {
       border-radius: 0.5rem;
-    }
-    
-    .rounded-xl {
-      border-radius: 0.75rem;
     }
     
     .rounded-full {
@@ -563,66 +387,6 @@
       width: 100%;
     }
     
-    .w-1\/2 {
-      width: 50%;
-    }
-    
-    .w-6 {
-      width: 1.5rem;
-    }
-    
-    .h-6 {
-      height: 1.5rem;
-    }
-    
-    .w-8 {
-      width: 2rem;
-    }
-    
-    .h-8 {
-      height: 2rem;
-    }
-    
-    .w-10 {
-      width: 2.5rem;
-    }
-    
-    .h-10 {
-      height: 2.5rem;
-    }
-    
-    .w-12 {
-      width: 3rem;
-    }
-    
-    .h-12 {
-      height: 3rem;
-    }
-    
-    .w-20 {
-      width: 5rem;
-    }
-    
-    .h-20 {
-      height: 5rem;
-    }
-    
-    .max-w-xs {
-      max-width: 20rem;
-    }
-    
-    .max-w-sm {
-      max-width: 24rem;
-    }
-    
-    .max-w-md {
-      max-width: 28rem;
-    }
-    
-    .max-w-lg {
-      max-width: 32rem;
-    }
-    
     .max-w-xl {
       max-width: 36rem;
     }
@@ -635,24 +399,57 @@
       max-width: 56rem;
     }
     
-    .min-h-screen {
-      min-height: 100vh;
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .h-6 {
+      height: 1.5rem;
+    }
+    
+    .w-6 {
+      width: 1.5rem;
+    }
+    
+    .h-8 {
+      height: 2rem;
+    }
+    
+    .w-8 {
+      width: 2rem;
+    }
+    
+    .h-10 {
+      height: 2.5rem;
+    }
+    
+    .w-10 {
+      width: 2.5rem;
+    }
+    
+    .h-12 {
+      height: 3rem;
+    }
+    
+    .w-12 {
+      width: 3rem;
+    }
+    
+    .h-20 {
+      height: 5rem;
+    }
+    
+    .w-20 {
+      width: 5rem;
+    }
+    
+    .inline-flex {
+      display: inline-flex;
     }
     
     .flex-shrink-0 {
       flex-shrink: 0;
-    }
-    
-    .flex-grow {
-      flex-grow: 1;
-    }
-    
-    .space-x-4 > * + * {
-      margin-left: 1rem;
-    }
-    
-    .space-x-6 > * + * {
-      margin-left: 1.5rem;
     }
     
     .space-y-4 > * + * {
@@ -667,75 +464,140 @@
       margin-top: 2rem;
     }
     
-    .inline-flex {
-      display: inline-flex;
+    /* Special Sections */
+    .bg-gradient-to-b {
+      background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
     }
     
-    /* Navbar styles */
+    .from-black {
+      --tw-gradient-from: #000;
+      --tw-gradient-to: rgba(0, 0, 0, 0);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+    
+    .to-gray-900 {
+      --tw-gradient-to: #111827;
+    }
+    
+    .from-gray-900 {
+      --tw-gradient-from: #111827;
+      --tw-gradient-to: rgba(17, 24, 39, 0);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+    
+    /* Navigation styles */
     .navbar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 50;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       transition: all 0.3s ease;
       background-color: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(8px);
     }
     
-    .navbar-transparent {
-      background-color: transparent;
-      padding: 1.25rem 0;
+    /* Chat Animation */
+    .chat-message {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
     
-    .navbar-scrolled {
-      padding: 0.75rem 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(8px);
+    .chat-message.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     
+    .typing-indicator {
+      display: none;
+    }
+    
+    .typing-indicator.visible {
+      display: flex;
+    }
+    
+    .typing-dot {
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      margin-right: 0.25rem;
+      opacity: 0.7;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    
+    .typing-dot:nth-child(1) {
+      animation: pulse 1.5s 0s infinite;
+    }
+    
+    .typing-dot:nth-child(2) {
+      animation: pulse 1.5s 0.2s infinite;
+    }
+    
+    .typing-dot:nth-child(3) {
+      animation: pulse 1.5s 0.4s infinite;
+    }
+    
+    /* Mobile Menu */
     .mobile-menu {
+      display: none;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.95);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      animation: fadeIn 0.3s ease-out;
-      display: none;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 40;
+      padding: 1rem 0;
     }
     
     .mobile-menu.open {
+      transform: translateY(0);
       display: block;
     }
     
-    /* Special Sections */
-    .bg-gradient-to-b {
-      background-image: linear-gradient(to bottom, var(--from-color), var(--to-color));
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
     }
     
-    .from-black {
-      --from-color: #000;
+    .mobile-menu a:hover {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.05);
     }
     
-    .to-gray-900 {
-      --to-color: #111827;
+    /* Button for mobile menu */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 0.5rem;
     }
     
-    .from-gray-900 {
-      --from-color: #111827;
+    /* Animation utilities */
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease forwards;
     }
     
-    .to-black {
-      --to-color: #000;
-    }
-    
-    /* Custom animation */
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(10px);
       }
       to {
         opacity: 1;
@@ -743,18 +605,65 @@
       }
     }
     
+    .animate-bubble-in {
+      animation: bubbleIn 0.3s ease forwards;
+    }
+    
+    @keyframes bubbleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
     /* Responsive styles */
-    @media (min-width: 640px) {
-      .sm\:flex-row {
-        flex-direction: row;
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
       }
       
-      .sm\:flex-col {
-        flex-direction: column;
+      .desktop-menu {
+        display: none;
       }
       
-      .sm\:text-left {
-        text-align: left;
+      .hero-section {
+        padding-top: 6rem;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+        text-align: center;
+      }
+      
+      .hero-description {
+        text-align: center;
+      }
+      
+      .hero-buttons {
+        justify-content: center;
+      }
+      
+      .hero-stats {
+        justify-content: center;
+      }
+      
+      .section-title {
+        font-size: 1.875rem;
+      }
+      
+      .hero-phone {
+        margin-top: 2rem;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     
@@ -816,10 +725,6 @@
       .md\:w-1\/2 {
         width: 50%;
       }
-      
-      .md\:space-x-0 > * + * {
-        margin-left: 0;
-      }
     }
     
     @media (min-width: 1024px) {
@@ -835,89 +740,236 @@
         width: 50%;
       }
     }
+    
+    /* Specific component styles */
+    .chat-container {
+      position: relative;
+      width: 100%;
+      max-width: 24rem;
+      aspect-ratio: 9/16;
+      background: black;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    
+    .chat-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+    
+    .chat-header {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 3.5rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 10;
+    }
+    
+    .chat-messages {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 3.5rem;
+      bottom: 3.5rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      overflow-y: auto;
+    }
+    
+    .message-client {
+      align-self: flex-end;
+      background-color: rgba(0, 191, 255, 0.1);
+      backdrop-filter: blur(4px);
+      border-radius: 0.5rem;
+      border-bottom-right-radius: 0;
+      padding: 0.75rem;
+      max-width: 80%;
+    }
+    
+    .message-ai {
+      align-self: flex-start;
+      background-color: rgba(37, 211, 102, 0.1);
+      backdrop-filter: blur(4px);
+      border-radius: 0.5rem;
+      border-bottom-left-radius: 0;
+      padding: 0.75rem;
+      max-width: 80%;
+    }
+    
+    .chat-input {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3.5rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      padding: 0 0.75rem;
+      gap: 0.5rem;
+    }
+    
+    .input-field {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      height: 2.5rem;
+      flex-grow: 1;
+      padding: 0 1rem;
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+    }
+    
+    .send-button {
+      height: 2.5rem;
+      width: 2.5rem;
+      background-color: #25D366;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Other utility styles */
+    .space-x-6 > * + * {
+      margin-left: 1.5rem;
+    }
+    
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .ml-auto {
+      margin-left: auto;
+    }
+    
+    .mr-4 {
+      margin-right: 1rem;
+    }
+    
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .inset-x-0 {
+      left: 0;
+      right: 0;
+    }
+    
+    .top-0 {
+      top: 0;
+    }
+    
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .top-14 {
+      top: 3.5rem;
+    }
+    
+    .pb-20 {
+      padding-bottom: 5rem;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    /* Animation for chat bubbles */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <div class="flex justify-between items-center">
-        <div class="text-2xl font-bold gradient-text">ConversionAI</div>
-        
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="#how-it-works" class="text-white/80 hover:text-white transition-colors">
-            Como Funciona
-          </a>
-          <a href="#comparison" class="text-white/80 hover:text-white transition-colors">
-            Por Que IA?
-          </a>
-          <a href="#testimonials" class="text-white/80 hover:text-white transition-colors">
-            Depoimentos
-          </a>
-          <a href="#contact" class="btn btn-whatsapp">
-            Começar Agora
-          </a>
-        </div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="md:hidden text-white" id="menuToggle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
+  <nav class="navbar">
+    <div class="container flex justify-between items-center">
+      <div class="gradient-text text-2xl font-bold">ConversionAI</div>
+      
+      <!-- Desktop Menu -->
+      <div class="desktop-menu md:flex items-center space-x-6 hidden">
+        <a href="#how-it-works" class="text-white/80 hover:text-white">Como Funciona</a>
+        <a href="#comparison" class="text-white/80 hover:text-white">Por Que IA?</a>
+        <a href="#testimonials" class="text-white/80 hover:text-white">Depoimentos</a>
+        <a href="#contact" class="btn btn-whatsapp">Começar Agora</a>
       </div>
       
-      <!-- Mobile Menu Panel -->
-      <div class="mobile-menu" id="mobileMenu">
-        <div class="container px-4 py-4 flex flex-col space-y-4">
-          <a 
-            href="#how-it-works" 
-            class="text-white/80 hover:text-white py-2 transition-colors"
-          >
-            Como Funciona
-          </a>
-          <a 
-            href="#comparison" 
-            class="text-white/80 hover:text-white py-2 transition-colors"
-          >
-            Por Que IA?
-          </a>
-          <a 
-            href="#testimonials" 
-            class="text-white/80 hover:text-white py-2 transition-colors"
-          >
-            Depoimentos
-          </a>
-          <a 
-            href="#contact" 
-            class="btn btn-whatsapp w-full flex justify-center"
-          >
-            Começar Agora
-          </a>
-        </div>
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menuToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#how-it-works" class="text-white/80 hover:text-white py-2">Como Funciona</a>
+        <a href="#comparison" class="text-white/80 hover:text-white py-2">Por Que IA?</a>
+        <a href="#testimonials" class="text-white/80 hover:text-white py-2">Depoimentos</a>
+        <a href="#contact" class="btn btn-whatsapp w-full flex justify-center mt-4">Começar Agora</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
+  <section class="hero-section relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
     <!-- Background elements -->
     <div class="hero-glow bg-whatsapp" style="top: 25%; left: 25%;"></div>
     <div class="hero-glow bg-neonBlue" style="bottom: 33%; right: 25%;"></div>
     
     <div class="container z-10">
       <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="w-full lg:w-1/2 space-y-8">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <div class="w-full lg:w-1/2 space-y-8 animate-fade-in">
+          <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Agentes de WhatsApp com <span style="color: #25D366;">tecnologia IA</span> que convertem
           </h1>
           
-          <p class="text-lg md:text-xl text-white/80 max-w-xl">
+          <p class="hero-description text-lg md:text-xl text-white/80 max-w-xl">
             Construímos, treinamos e implementamos agentes de IA que gerenciam atendimento ao cliente e vendas 24/7 — para você nunca mais perder um lead.
           </p>
           
-          <div class="flex flex-col sm:flex-row gap-4">
+          <div class="hero-buttons flex flex-col sm:flex-row gap-4">
             <a href="#demo" class="btn btn-whatsapp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+              </svg>
               <span>Veja a IA em ação</span>
             </a>
             <a href="#how-it-works" class="btn btn-secondary">
@@ -925,7 +977,7 @@
             </a>
           </div>
           
-          <div class="pt-6 flex flex-col sm:flex-row gap-6 text-white/70">
+          <div class="hero-stats pt-6 flex flex-col sm:flex-row gap-6 text-white/70">
             <div class="flex items-center gap-2">
               <div class="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
               <span>Pronto em 48 horas</span>
@@ -942,58 +994,36 @@
         </div>
         
         <div class="w-full lg:w-1/2 flex justify-center">
-          <div class="relative w-full max-w-md" style="aspect-ratio: 9/16; background: black; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 0.75rem; overflow: hidden;">
-            <div style="position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000'); background-size: cover; background-position: center; opacity: 0.2;"></div>
+          <div class="hero-phone chat-container animate-fade-in" id="chatContainer">
+            <div class="chat-bg"></div>
             
             <!-- WhatsApp-like header -->
-            <div style="position: absolute; inset-x: 0; top: 0; height: 3.5rem; background-color: rgba(0, 0, 0, 0.8); border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; padding: 0 1rem;">
-              <div style="width: 2rem; height: 2rem; border-radius: 9999px; background-color: #25D366; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+            <div class="chat-header">
+              <div class="w-8 h-8 rounded-full bg-whatsapp flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+                </svg>
               </div>
               <div>
-                <div style="font-size: 0.875rem; font-weight: 500;">Clínica Dra. Renata</div>
-                <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6);">Online</div>
+                <div class="text-sm font-medium">Clínica Dra. Renata</div>
+                <div class="text-xs text-white/60">Online</div>
               </div>
             </div>
             
-            <!-- Chat messages -->
-            <div style="position: absolute; inset-x: 0; bottom: 0; top: 3.5rem; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; overflow-y: auto; padding-bottom: 5rem;">
-              <div style="margin-left: auto; background-color: rgba(0, 191, 255, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; font-size: 0.875rem;">
-                Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.
-              </div>
-              
-              <div style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Olá! Que bom que você está aqui 💚
-              </div>
-              
-              <div style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Eu faço parte da equipe da Dra. Renata e posso te ajudar.
-              </div>
-              
-              <div style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨
-              </div>
-              
-              <div style="margin-left: auto; background-color: rgba(0, 191, 255, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; font-size: 0.875rem;">
-                Quero melhorar meu queixo e parecer menos cansada.
-              </div>
-              
-              <div style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Esse é um dos tratamentos mais solicitados na clínica!
-              </div>
-              
-              <div style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?
-              </div>
+            <!-- Chat messages container -->
+            <div class="chat-messages" id="chatMessages">
+              <!-- Messages will be inserted here by JavaScript -->
             </div>
             
             <!-- Input field (decoration only) -->
-            <div style="position: absolute; inset-x: 0; bottom: 0; padding: 0.75rem; background-color: rgba(0, 0, 0, 0.8); display: flex; align-items: center; gap: 0.5rem;">
-              <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 9999px; height: 2.5rem; flex-grow: 1; padding: 0 1rem; color: rgba(255, 255, 255, 0.5); display: flex; align-items: center; font-size: 0.875rem;">
+            <div class="chat-input">
+              <div class="input-field">
                 Digite sua mensagem...
               </div>
-              <div style="height: 2.5rem; width: 2.5rem; background-color: #25D366; border-radius: 9999px; display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+              <div class="send-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -1003,10 +1033,10 @@
   </section>
 
   <!-- Pain Points Section -->
-  <section class="py-16 md:py-20 px-4 bg-black" id="pain-points">
+  <section class="section-padding bg-black" id="pain-points">
     <div class="container">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">
           Você Está <span style="color: #ef4444;">Perdendo Vendas</span> Todos os Dias?
         </h2>
         <p class="text-xl text-white/70 max-w-2xl mx-auto">
@@ -1014,10 +1044,13 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8">
         <div class="card">
           <div class="h-12 w-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
           </div>
           <h3 class="text-xl font-bold mb-3">Respostas Atrasadas</h3>
           <p class="text-white/70">
@@ -1027,7 +1060,9 @@
         
         <div class="card">
           <div class="h-12 w-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+            </svg>
           </div>
           <h3 class="text-xl font-bold mb-3">Mensagens Perdidas</h3>
           <p class="text-white/70">
@@ -1037,7 +1072,13 @@
         
         <div class="card">
           <div class="h-12 w-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 17c.3 0 .7-.1 1-.2l4 1-1-3.9.2-1.2c0-1.5-1.2-2.7-2.7-2.7H16c-.6 0-1 .4-1 1v4c0 1.1.9 2 2 2z"></path><path d="M7 10h3"></path><path d="M10 7v3"></path><path d="M8.2 16.2c-.5.4-1.1.8-1.9.8-1.5 0-2.8-1-3.2-2.4-.1-.3-.5-.6-.9-.6H1.5c-.8 0-1.5.7-1.5 1.5v3c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5V18c0-.5-.2-.9-.6-1.2-.5-.5-1-1.2-1.2-1.7v1.1z"></path><path d="M6 10c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 17c.3 0 .7-.1 1-.2l4 1-1-3.9.2-1.2c0-1.5-1.2-2.7-2.7-2.7H16c-.6 0-1 .4-1 1v4c0 1.1.9 2 2 2z"></path>
+              <path d="M7 10h3"></path>
+              <path d="M10 7v3"></path>
+              <path d="M8.2 16.2c-.5.4-1.1.8-1.9.8-1.5 0-2.8-1-3.2-2.4-.1-.3-.5-.6-.9-.6H1.5c-.8 0-1.5.7-1.5 1.5v3c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5V18c0-.5-.2-.9-.6-1.2-.5-.5-1-1.2-1.2-1.7v1.1z"></path>
+              <path d="M6 10c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"></path>
+            </svg>
           </div>
           <h3 class="text-xl font-bold mb-3">Vendas Perdidas</h3>
           <p class="text-white/70">
@@ -1051,7 +1092,9 @@
           <span class="gradient-text">E se seu negócio pudesse responder instantaneamente, 24/7?</span>
         </p>
         <a href="#demo" class="btn btn-whatsapp inline-flex">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+          </svg>
           <span>Veja a IA de Conversão em Ação</span>
         </a>
       </div>
@@ -1059,14 +1102,14 @@
   </section>
 
   <!-- Demo Section -->
-  <section class="py-16 md:py-20 px-4 bg-black relative" id="demo">
+  <section class="section-padding bg-black relative" id="demo">
     <!-- Glow effects -->
     <div class="hero-glow bg-whatsapp" style="top: 25%; right: 25%;"></div>
     <div class="hero-glow bg-neonBlue" style="bottom: 33%; left: 25%;"></div>
     
     <div class="container">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">
           Veja Nossa <span class="gradient-text">IA de Conversão</span> em Ação
         </h2>
         <p class="text-xl text-white/70 max-w-2xl mx-auto">
@@ -1080,10 +1123,13 @@
           A IA <span class="gradient-text">se adapta</span> ao comportamento do seu lead
         </h3>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
           <div class="flex items-start gap-4">
             <div class="h-12 w-12 rounded-full bg-whatsapp/20 flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+              </svg>
             </div>
             <div>
               <h4 class="text-lg font-semibold mb-2">Respostas em Áudio</h4>
@@ -1093,7 +1139,17 @@
           
           <div class="flex items-start gap-4">
             <div class="h-12 w-12 rounded-full bg-neonBlue/20 flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M6 8h.001"></path><path d="M10 8h.001"></path><path d="M14 8h.001"></path><path d="M18 8h.001"></path><path d="M8 12h.001"></path><path d="M12 12h.001"></path><path d="M16 12h.001"></path><path d="M7 16h10"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M6 8h.001"></path>
+                <path d="M10 8h.001"></path>
+                <path d="M14 8h.001"></path>
+                <path d="M18 8h.001"></path>
+                <path d="M8 12h.001"></path>
+                <path d="M12 12h.001"></path>
+                <path d="M16 12h.001"></path>
+                <path d="M7 16h10"></path>
+              </svg>
             </div>
             <div>
               <h4 class="text-lg font-semibold mb-2">Respostas em Texto</h4>
@@ -1112,7 +1168,9 @@
         <!-- WhatsApp header -->
         <div style="background-color: rgba(37, 211, 102, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
           <div style="height: 2.5rem; width: 2.5rem; border-radius: 9999px; background: linear-gradient(to right, #25D366, #00bfff); display: flex; align-items: center; justify-content: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+            </svg>
           </div>
           <div>
             <div class="text-sm font-medium">Clínica Dra. Renata</div>
@@ -1125,7 +1183,11 @@
           <div class="flex justify-end">
             <div style="background-color: rgba(0, 191, 255, 0.2); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; max-width: 80%; margin-left: auto;">
               <div class="flex items-center gap-2 mb-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="22"></line>
+                </svg>
                 <span class="text-xs text-white/80">Mensagem de áudio recebida</span>
               </div>
               <p class="text-sm">Oi, vi o anúncio de harmonização e queria perguntar se vocês também fazem preenchimento no queixo?</p>
@@ -1136,7 +1198,10 @@
           <div class="flex justify-start">
             <div style="background-color: rgba(37, 211, 102, 0.2); border-radius: 0.5rem; border-bottom-left-radius: 0; padding: 0.75rem; max-width: 80%; margin-right: auto;">
               <div class="flex items-center gap-2 mb-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z"></path><path d="M8 12a4.14 4.14 0 0 0 1.2 3 4 4 0 0 0 1.59 1 3.93 3.93 0 0 0 1.69.1 4 4 0 0 0 1.45-.59A3.89 3.89 0 0 0 15 14"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z"></path>
+                  <path d="M8 12a4.14 4.14 0 0 0 1.2 3 4 4 0 0 0 1.59 1 3.93 3.93 0 0 0 1.69.1 4 4 0 0 0 1.45-.59A3.89 3.89 0 0 0 15 14"></path>
+                </svg>
                 <span class="text-xs text-white/80">Resposta em áudio enviada</span>
               </div>
               <p class="text-sm">Sim! Preenchimento no queixo é um dos procedimentos mais populares. Gostaria que eu explicasse como funciona ou quer agendar uma consulta?</p>
@@ -1168,7 +1233,9 @@
            class="btn btn-whatsapp inline-flex"
            target="_blank"
            rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+          </svg>
           <span>Quero uma IA de Conversão para minha empresa</span>
         </a>
       </div>
@@ -1176,10 +1243,10 @@
   </section>
 
   <!-- How It Works Section -->
-  <section class="py-16 md:py-20 px-4 bg-black" id="how-it-works">
+  <section class="section-padding bg-black" id="how-it-works">
     <div class="container">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">
           Como Nossa <span class="gradient-text">IA de Conversão</span> Funciona
         </h2>
         <p class="text-xl text-white/70 max-w-2xl mx-auto">
@@ -1187,7 +1254,7 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="space-y-8">
           <div class="flex gap-4">
             <div class="flex-shrink-0 h-10 w-10 rounded-full bg-whatsapp/20 flex items-center justify-center">
@@ -1243,44 +1310,67 @@
           
           <div class="space-y-4">
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Agente de IA que responde instantaneamente 24/7/365</p>
             </div>
             
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Treinamento personalizado baseado nos seus produtos e serviços</p>
             </div>
             
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Integração perfeita com o WhatsApp da sua empresa</p>
             </div>
             
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Conversas naturais que constroem confiança com os clientes</p>
             </div>
             
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Transferência para atendentes humanos em situações complexas</p>
             </div>
             
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Relatórios de desempenho mensais e otimização</p>
             </div>
             
             <div class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
               <p>Zero trabalho técnico necessário da sua parte</p>
             </div>
           </div>
           
           <div class="mt-8 pt-6 border-t border-white/10">
             <a href="#contact" class="btn btn-whatsapp w-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+              </svg>
               <span>Comece em 48 Horas</span>
             </a>
           </div>
@@ -1290,10 +1380,10 @@
   </section>
 
   <!-- Comparison Section -->
-  <section class="py-16 md:py-20 px-4 bg-gradient-to-b from-black to-gray-900" id="comparison">
+  <section class="section-padding bg-gradient-to-b from-black to-gray-900" id="comparison">
     <div class="container">
       <div class="text-center mb-10 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">
           Uma pessoa ou <span class="gradient-text">IA de Conversão</span>? Veja quem entrega mais.
         </h2>
         <p class="text-xl text-white/70 max-w-2xl mx-auto">
@@ -1301,12 +1391,15 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+      <div class="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
         <!-- Human Side -->
         <div class="card border-white/10 rounded-xl shadow-lg" style="box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
           <div class="text-center mb-6 md:mb-8">
             <div class="h-20 w-20 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
             </div>
             <h3 class="text-2xl font-bold">Funcionário</h3>
           </div>
@@ -1330,19 +1423,39 @@
             </div>
             <div class="flex justify-between items-start border-b border-white/10 pb-3">
               <span class="text-base md:text-lg font-medium">Desempenho Consistente</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </span>
             </div>
             <div class="flex justify-between items-start border-b border-white/10 pb-3">
               <span class="text-base md:text-lg font-medium">Disponibilidade 24/7</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </span>
             </div>
             <div class="flex justify-between items-start border-b border-white/10 pb-3">
               <span class="text-base md:text-lg font-medium">Zero Dias de Doença</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </span>
             </div>
             <div class="flex justify-between items-start pb-3">
               <span class="text-base md:text-lg font-medium">Escala com Demanda</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </span>
             </div>
           </div>
         </div>
@@ -1355,7 +1468,11 @@
           
           <div class="text-center mb-6 md:mb-8">
             <div class="h-20 w-20 rounded-full mx-auto flex items-center justify-center mb-4" style="background: linear-gradient(to right, #25D366, #00bfff);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+                <path d="M9 8h6"></path>
+                <path d="M9 12h6"></path>
+              </svg>
             </div>
             <h3 class="text-2xl font-bold">IA de Conversão</h3>
           </div>
@@ -1379,25 +1496,47 @@
             </div>
             <div class="flex justify-between items-start border-b border-white/10 pb-3">
               <span class="text-base md:text-lg font-medium">Desempenho Consistente</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </span>
             </div>
             <div class="flex justify-between items-start border-b border-white/10 pb-3">
               <span class="text-base md:text-lg font-medium">Disponibilidade 24/7</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </span>
             </div>
             <div class="flex justify-between items-start border-b border-white/10 pb-3">
               <span class="text-base md:text-lg font-medium">Zero Dias de Doença</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </span>
             </div>
             <div class="flex justify-between items-start pb-3">
               <span class="text-base md:text-lg font-medium">Escala com Demanda</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </span>
             </div>
           </div>
           
           <div class="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/10">
             <a href="#contact" class="btn btn-whatsapp w-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+              </svg>
               <span>Obtenha sua IA de Conversão</span>
             </a>
           </div>
@@ -1407,10 +1546,10 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-16 md:py-20 px-4 bg-gradient-to-b from-gray-900 to-black" id="testimonials">
+  <section class="section-padding bg-gradient-to-b from-gray-900 to-black" id="testimonials">
     <div class="container">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">
           Negócios <span class="gradient-text">Transformados</span>
         </h2>
         <p class="text-xl text-white/70 max-w-2xl mx-auto">
@@ -1418,26 +1557,35 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8">
         <!-- Testimonial 1 -->
         <div class="card">
           <div class="flex mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
           </div>
           
           <p class="mb-6 text-white/80">"Desde que implementamos o agente de IA, aumentamos nossos agendamentos de consultas em 40%. Ele responde aos clientes 24/7 e lida com todas as perguntas básicas, liberando nossa equipe para consultas mais complexas."</p>
           
           <div class="flex items-center">
-            <div class="h-12 w-12 rounded-full overflow-hidden mr-4" style="background-color: #333;">
+            <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
               <img 
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" 
                 alt="Ana Carolina" 
                 class="h-full w-full object-cover" 
-                loading="lazy"
               />
             </div>
             <div>
@@ -1450,22 +1598,31 @@
         <!-- Testimonial 2 -->
         <div class="card">
           <div class="flex mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
           </div>
           
           <p class="mb-6 text-white/80">"Nossa taxa de conversão dobrou desde que adicionamos o assistente de IA. Ele responde às perguntas sobre produtos instantaneamente e ajuda os clientes a tomarem decisões de compra mesmo às 2h da manhã, quando nossa equipe está dormindo."</p>
           
           <div class="flex items-center">
-            <div class="h-12 w-12 rounded-full overflow-hidden mr-4" style="background-color: #333;">
+            <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
               <img 
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" 
                 alt="Rafael Oliveira" 
-                class="h-full w-full object-cover"
-                loading="lazy" 
+                class="h-full w-full object-cover" 
               />
             </div>
             <div>
@@ -1478,22 +1635,31 @@
         <!-- Testimonial 3 -->
         <div class="card">
           <div class="flex mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#eab308" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
           </div>
           
           <p class="mb-6 text-white/80">"A IA gerencia todas as nossas reservas agora e responde a perguntas comuns sobre nosso cardápio e opções dietéticas especiais. Isso liberou nossa equipe para se concentrar em fornecer um excelente serviço aos clientes no local."</p>
           
           <div class="flex items-center">
-            <div class="h-12 w-12 rounded-full overflow-hidden mr-4" style="background-color: #333;">
+            <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
               <img 
                 src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200" 
                 alt="Márcia Santos" 
-                class="h-full w-full object-cover"
-                loading="lazy" 
+                class="h-full w-full object-cover" 
               />
             </div>
             <div>
@@ -1509,7 +1675,9 @@
           Junte-se a centenas de empresas que transformaram sua comunicação com clientes
         </p>
         <a href="#contact" class="btn btn-whatsapp inline-flex">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+          </svg>
           <span>Obtenha seu Agente de IA</span>
         </a>
       </div>
@@ -1517,7 +1685,7 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="py-16 md:py-20 px-4 bg-black relative" id="contact">
+  <section class="section-padding bg-black relative" id="contact">
     <!-- Glow effects -->
     <div class="hero-glow bg-whatsapp" style="top: 25%; right: 25%;"></div>
     <div class="hero-glow bg-neonBlue" style="bottom: 33%; left: 25%;"></div>
@@ -1525,7 +1693,7 @@
     <div class="container relative z-10">
       <div class="card gradient-border p-8 md:p-12 max-w-4xl mx-auto">
         <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">
             Pronto para <span class="gradient-text">aumentar suas vendas</span>?
           </h2>
           <p class="text-lg text-white/70">
@@ -1540,7 +1708,9 @@
             rel="noopener noreferrer"
             class="btn btn-whatsapp inline-flex text-lg px-10 py-4"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path>
+            </svg>
             <span>Ativar minha IA no WhatsApp agora</span>
           </a>
         </div>
@@ -1592,69 +1762,169 @@
     </div>
   </footer>
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=956654252730798&ev=PageView&noscript=1" />
-  </noscript>
-  
   <script>
-    // Simple script for navbar scroll effect and mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
-      const navbar = document.getElementById('navbar');
+    // Chat simulation data
+    const conversationData = [
+      { role: "client", message: "Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.", delay: 0 },
+      { role: "ai", message: "Olá! Que bom que você está aqui 💚", delay: 1000 },
+      { role: "ai", message: "Eu faço parte da equipe da Dra. Renata e posso te ajudar.", delay: 2000 },
+      { role: "ai", message: "Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨", delay: 3000 },
+      { role: "client", message: "Quero melhorar meu queixo e parecer menos cansada.", delay: 5000 },
+      { role: "ai", message: "Esse é um dos tratamentos mais solicitados na clínica!", delay: 6000 },
+      { role: "ai", message: "Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?", delay: 7000 }
+    ];
+    
+    // Chat simulation functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      // Mobile menu functionality
       const menuToggle = document.getElementById('menuToggle');
       const mobileMenu = document.getElementById('mobileMenu');
       
-      // Handle scroll event for navbar
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 20) {
-          navbar.classList.add('navbar-scrolled');
-          navbar.classList.remove('navbar-transparent');
-        } else {
-          navbar.classList.remove('navbar-scrolled');
-          navbar.classList.add('navbar-transparent');
-        }
-      });
-      
-      // Initial check for navbar
-      if (window.scrollY > 20) {
-        navbar.classList.add('navbar-scrolled');
-      } else {
-        navbar.classList.add('navbar-transparent');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('open');
+          
+          // Change icon based on menu state
+          if (mobileMenu.classList.contains('open')) {
+            menuToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+          } else {
+            menuToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+          }
+        });
+        
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+            menuToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+          });
+        });
       }
       
-      // Mobile menu toggle
-      menuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('open');
-        
-        // Change icon based on menu state
-        if (mobileMenu.classList.contains('open')) {
-          menuToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
-        } else {
-          menuToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+      // Chat simulation
+      const chatContainer = document.getElementById('chatContainer');
+      const chatMessages = document.getElementById('chatMessages');
+      
+      if (chatContainer && chatMessages) {
+        // Function to create a message element
+        function createMessageElement(message) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = `chat-message ${message.role === 'client' ? 'message-client' : 'message-ai'}`;
+          messageDiv.textContent = message.message;
+          return messageDiv;
         }
-      });
+        
+        // Function to create a typing indicator
+        function createTypingIndicator() {
+          const typingDiv = document.createElement('div');
+          typingDiv.className = 'message-ai typing-indicator';
+          
+          const dot1 = document.createElement('div');
+          dot1.className = 'typing-dot';
+          const dot2 = document.createElement('div');
+          dot2.className = 'typing-dot';
+          const dot3 = document.createElement('div');
+          dot3.className = 'typing-dot';
+          
+          typingDiv.appendChild(dot1);
+          typingDiv.appendChild(dot2);
+          typingDiv.appendChild(dot3);
+          
+          return typingDiv;
+        }
+        
+        // Function to initialize and run the chat animation
+        function initializeChatAnimation() {
+          const typingIndicator = createTypingIndicator();
+          let currentIndex = 0;
+          
+          function showNextMessage() {
+            if (currentIndex >= conversationData.length) return;
+            
+            const message = conversationData[currentIndex];
+            
+            if (message.role === 'ai' && currentIndex > 0) {
+              // Show typing indicator before AI messages (except first one)
+              chatMessages.appendChild(typingIndicator);
+              typingIndicator.style.display = 'flex';
+              
+              // After a short delay, show the actual message
+              setTimeout(() => {
+                typingIndicator.style.display = 'none';
+                const messageElement = createMessageElement(message);
+                chatMessages.appendChild(messageElement);
+                
+                // Animate the message
+                setTimeout(() => {
+                  messageElement.classList.add('visible');
+                  chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 50);
+                
+                currentIndex++;
+                if (currentIndex < conversationData.length) {
+                  setTimeout(showNextMessage, message.role === 'client' ? 1000 : 800);
+                }
+              }, 800);
+            } else {
+              // Show client message immediately
+              const messageElement = createMessageElement(message);
+              chatMessages.appendChild(messageElement);
+              
+              // Animate the message
+              setTimeout(() => {
+                messageElement.classList.add('visible');
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }, 50);
+              
+              currentIndex++;
+              if (currentIndex < conversationData.length) {
+                setTimeout(showNextMessage, message.role === 'client' ? 1000 : 800);
+              }
+            }
+          }
+          
+          // Start the animation sequence
+          showNextMessage();
+        }
+        
+        // Start chat animation when element is visible in viewport
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+        
+        let animationStarted = false;
+        
+        function checkVisibility() {
+          if (!animationStarted && isElementInViewport(chatContainer)) {
+            initializeChatAnimation();
+            animationStarted = true;
+          }
+        }
+        
+        // Run on scroll and initially
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+        checkVisibility();
+      }
       
-      // Close mobile menu when clicking on menu items
-      const mobileMenuItems = mobileMenu.querySelectorAll('a');
-      mobileMenuItems.forEach(item => {
-        item.addEventListener('click', function() {
-          mobileMenu.classList.remove('open');
-          menuToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-        });
-      });
-      
-      // Smooth scrolling for anchor links
+      // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
           
           const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
           const targetElement = document.querySelector(targetId);
+          
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 80, // Adjust for navbar height
+              top: targetElement.offsetTop - 100,
               behavior: 'smooth'
             });
           }
@@ -1662,5 +1932,10 @@
       });
     });
   </script>
+  
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=956654252730798&ev=PageView&noscript=1" />
+  </noscript>
 </body>
 </html>
