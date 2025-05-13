@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ConversãoIA - Agente de WhatsApp com IA</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <title>ConversãoIA - Agentes de WhatsApp com IA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <style>
     /* Base styles */
     * {
@@ -18,9 +18,25 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     
+    :root {
+      --whatsapp: #25D366;
+      --neonBlue: #00bfff;
+      --black: #000;
+      --white: #fff;
+      --gray: rgba(255, 255, 255, 0.7);
+      --gray-60: rgba(255, 255, 255, 0.6);
+      --bg-card: rgba(255, 255, 255, 0.05);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-hover: rgba(255, 255, 255, 0.2);
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
     body {
-      background-color: black;
-      color: white;
+      background-color: var(--black);
+      color: var(--white);
       line-height: 1.5;
     }
     
@@ -29,7 +45,9 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
     }
     
     /* Typography */
@@ -45,7 +63,7 @@
     
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     
     p {
@@ -54,14 +72,20 @@
     
     /* Sections */
     section {
-      padding: 5rem 1rem;
+      padding: 6rem 1rem;
       position: relative;
+      overflow: hidden;
     }
     
     /* Links & Buttons */
     a {
-      color: white;
+      color: var(--white);
       text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    a:hover {
+      opacity: 0.9;
     }
     
     .btn {
@@ -72,42 +96,48 @@
       padding: 0.75rem 1.5rem;
       border-radius: 0.375rem;
       font-weight: 500;
-      transition: opacity 0.2s;
+      transition: all 0.2s;
       cursor: pointer;
+      border: none;
     }
     
     .btn:hover {
       opacity: 0.9;
+      transform: translateY(-1px);
     }
     
     .btn-whatsapp {
-      background-color: #25D366;
-      color: white;
+      background-color: var(--whatsapp);
+      color: var(--white);
     }
     
     .btn-secondary {
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      border: 2px solid var(--border-color);
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
     }
     
+    .btn-secondary:hover {
+      border-color: var(--border-hover);
+    }
+    
     /* Cards */
     .card {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: var(--bg-card);
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border-color);
       border-radius: 0.75rem;
       padding: 1.5rem;
       transition: all 0.3s;
     }
     
     .card:hover {
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: var(--border-hover);
     }
     
     /* Gradients */
     .gradient-text {
-      background: linear-gradient(to right, #25D366, #00bfff);
+      background: linear-gradient(to right, var(--whatsapp), var(--neonBlue));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -123,7 +153,7 @@
       inset: 0;
       border-radius: 0.5rem;
       padding: 2px;
-      background: linear-gradient(to right, #25D366, #00bfff);
+      background: linear-gradient(to right, var(--whatsapp), var(--neonBlue));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -142,11 +172,11 @@
     }
     
     .bg-whatsapp {
-      background-color: #25D366;
+      background-color: var(--whatsapp);
     }
     
     .bg-neonBlue {
-      background-color: #00bfff;
+      background-color: var(--neonBlue);
     }
     
     /* Layout */
@@ -170,6 +200,14 @@
       justify-content: space-between;
     }
     
+    .gap-2 {
+      gap: 0.5rem;
+    }
+    
+    .gap-3 {
+      gap: 0.75rem;
+    }
+    
     .gap-4 {
       gap: 1rem;
     }
@@ -180,6 +218,18 @@
     
     .gap-8 {
       gap: 2rem;
+    }
+    
+    .gap-12 {
+      gap: 3rem;
+    }
+    
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .mb-3 {
+      margin-bottom: 0.75rem;
     }
     
     .mb-4 {
@@ -202,6 +252,14 @@
       margin-bottom: 4rem;
     }
     
+    .mt-1 {
+      margin-top: 0.25rem;
+    }
+    
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+    
     .mt-4 {
       margin-top: 1rem;
     }
@@ -222,6 +280,26 @@
       margin-top: 4rem;
     }
     
+    .mr-3 {
+      margin-right: 0.75rem;
+    }
+    
+    .mr-4 {
+      margin-right: 1rem;
+    }
+    
+    .ml-auto {
+      margin-left: auto;
+    }
+    
+    .mr-auto {
+      margin-right: auto;
+    }
+    
+    .p-3 {
+      padding: 0.75rem;
+    }
+    
     .p-4 {
       padding: 1rem;
     }
@@ -234,8 +312,57 @@
       padding: 2rem;
     }
     
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    
+    .px-10 {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+    
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    .py-10 {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+    
     .pt-6 {
       padding-top: 1.5rem;
+    }
+    
+    .pt-20 {
+      padding-top: 5rem;
     }
     
     .pb-3 {
@@ -253,19 +380,19 @@
     
     /* Borders */
     .border-t {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid var(--border-color);
     }
     
     .border-b {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid var(--border-color);
     }
     
     .border-white\/10 {
-      border-color: rgba(255, 255, 255, 0.1);
+      border-color: var(--border-color);
     }
     
     .border-whatsapp {
-      border-color: #25D366;
+      border-color: var(--whatsapp);
     }
     
     /* Text utilities */
@@ -278,19 +405,19 @@
     }
     
     .text-white {
-      color: white;
+      color: var(--white);
     }
     
     .text-white\/70 {
-      color: rgba(255, 255, 255, 0.7);
+      color: var(--gray);
     }
     
     .text-white\/60 {
-      color: rgba(255, 255, 255, 0.6);
+      color: var(--gray-60);
     }
     
     .text-whatsapp {
-      color: #25D366;
+      color: var(--whatsapp);
     }
     
     .text-red-500 {
@@ -299,6 +426,10 @@
     
     .text-yellow-500 {
       color: #eab308;
+    }
+    
+    .text-xs {
+      font-size: 0.75rem;
     }
     
     .text-sm {
@@ -329,6 +460,10 @@
       font-weight: 500;
     }
     
+    .font-semibold {
+      font-weight: 600;
+    }
+    
     .font-bold {
       font-weight: 700;
     }
@@ -338,12 +473,60 @@
       position: relative;
     }
     
+    .absolute {
+      position: absolute;
+    }
+    
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .inset-x-0 {
+      left: 0;
+      right: 0;
+    }
+    
+    .top-0 {
+      top: 0;
+    }
+    
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .top-1\/4 {
+      top: 25%;
+    }
+    
+    .right-1\/4 {
+      right: 25%;
+    }
+    
+    .left-1\/4 {
+      left: 25%;
+    }
+    
+    .bottom-1\/3 {
+      bottom: 33%;
+    }
+    
     .z-10 {
       z-index: 10;
     }
     
+    .z-50 {
+      z-index: 50;
+    }
+    
     .overflow-hidden {
       overflow: hidden;
+    }
+    
+    .overflow-y-auto {
+      overflow-y: auto;
     }
     
     .rounded-xl {
@@ -354,6 +537,10 @@
       border-radius: 0.5rem;
     }
     
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+    
     .rounded-full {
       border-radius: 9999px;
     }
@@ -362,8 +549,20 @@
       border-bottom-left-radius: 0.5rem;
     }
     
+    .rounded-bl-none {
+      border-bottom-left-radius: 0;
+    }
+    
+    .rounded-br-none {
+      border-bottom-right-radius: 0;
+    }
+    
     .shadow-lg {
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .backdrop-blur-sm {
+      backdrop-filter: blur(8px);
     }
     
     .w-full {
@@ -382,9 +581,25 @@
       max-width: 56rem;
     }
     
+    .max-w-lg {
+      max-width: 32rem;
+    }
+    
+    .max-w-md {
+      max-width: 28rem;
+    }
+    
     .mx-auto {
       margin-left: auto;
       margin-right: auto;
+    }
+    
+    .h-2 {
+      height: 0.5rem;
+    }
+    
+    .w-2 {
+      width: 0.5rem;
     }
     
     .h-6 {
@@ -419,6 +634,10 @@
       width: 3rem;
     }
     
+    .h-14 {
+      height: 3.5rem;
+    }
+    
     .h-20 {
       height: 5rem;
     }
@@ -427,12 +646,40 @@
       width: 5rem;
     }
     
+    .h-full {
+      height: 100%;
+    }
+    
+    .w-full {
+      width: 100%;
+    }
+    
+    .min-h-screen {
+      min-height: 100vh;
+    }
+    
+    .aspect-\[9\/16\] {
+      aspect-ratio: 9/16;
+    }
+    
     .inline-flex {
       display: inline-flex;
     }
     
     .flex-shrink-0 {
       flex-shrink: 0;
+    }
+    
+    .flex-grow {
+      flex-grow: 1;
+    }
+    
+    .object-cover {
+      object-fit: cover;
+    }
+    
+    .opacity-20 {
+      opacity: 0.2;
     }
     
     .space-y-4 > * + * {
@@ -479,22 +726,250 @@
       transition: all 0.3s ease;
       background-color: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
     }
     
-    /* Animation */
-    @keyframes fade-in {
-      0% {
+    /* Mobile menu */
+    #mobile-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 80%;
+      max-width: 300px;
+      background-color: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    #mobile-menu.open {
+      transform: translateX(0);
+    }
+    
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 99;
+      display: none;
+    }
+    
+    .menu-overlay.open {
+      display: block;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
       }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
     
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes bubbleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    
     .animate-fade-in {
-      animation: fade-in 0.5s ease-out forwards;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .animate-bubble-in {
+      animation: bubbleIn 0.3s ease-out forwards;
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .invisible {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .visible {
+      opacity: 1;
+    }
+    
+    /* Chat simulator specific styles */
+    .chat-container {
+      position: relative;
+      width: 100%;
+      max-width: 28rem;
+      aspect-ratio: 9/16;
+      background-color: black;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    
+    .chat-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+    
+    .chat-header {
+      position: absolute;
+      inset-x: 0;
+      top: 0;
+      height: 3.5rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 5;
+    }
+    
+    .chat-messages {
+      position: absolute;
+      inset-x: 0;
+      bottom: 5rem;
+      top: 3.5rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      overflow-y: auto;
+      z-index: 3;
+    }
+    
+    .chat-input {
+      position: absolute;
+      inset-x: 0;
+      bottom: 0;
+      padding: 0.75rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 5;
+    }
+    
+    .message {
+      padding: 0.75rem;
+      font-size: 0.875rem;
+      border-radius: 0.5rem;
+      max-width: 80%;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    
+    .client-message {
+      background-color: rgba(0, 191, 255, 0.1);
+      backdrop-filter: blur(4px);
+      border-bottom-right-radius: 0;
+      margin-left: auto;
+    }
+    
+    .ai-message {
+      background-color: rgba(37, 211, 102, 0.1);
+      backdrop-filter: blur(4px);
+      border-bottom-left-radius: 0;
+      width: 80%;
+    }
+    
+    .typing-indicator {
+      background-color: rgba(37, 211, 102, 0.1);
+      backdrop-filter: blur(4px);
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border-bottom-left-radius: 0;
+      width: 4rem;
+      display: flex;
+      gap: 0.25rem;
+      opacity: 0;
+    }
+    
+    .typing-dot {
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    
+    .animation-active .message {
+      animation: fadeInUp 0.4s forwards;
+      animation-play-state: paused;
+    }
+    
+    .animation-active .typing-indicator {
+      animation: fadeIn 0.3s forwards;
+      animation-play-state: paused;
+    }
+    
+    /* Scroll to top button */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--whatsapp);
+      color: white;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 40;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
     }
     
     /* Responsive */
@@ -507,8 +982,8 @@
         flex-direction: column;
       }
       
-      .container {
-        padding: 0 1.5rem;
+      h1 {
+        font-size: 3rem;
       }
     }
     
@@ -571,12 +1046,20 @@
         width: 50%;
       }
       
-      section.section-padding {
-        padding: 5rem 2rem;
+      section {
+        padding: 7rem 2rem;
       }
     }
     
     @media (min-width: 1024px) {
+      .lg\:flex {
+        display: flex;
+      }
+      
+      .lg\:hidden {
+        display: none;
+      }
+      
       .lg\:flex-row {
         flex-direction: row;
       }
@@ -589,194 +1072,22 @@
         width: 50%;
       }
       
-      section.section-padding {
-        padding: 6rem 3rem;
-      }
-    }
-    
-    /* Mobile optimizations */
-    @media (max-width: 640px) {
       .container {
-        padding: 0 1rem;
+        padding: 0 2rem;
       }
       
-      .section-padding {
-        padding: 3rem 1rem;
-      }
-      
-      .text-3xl {
-        font-size: 1.75rem;
-      }
-      
-      .text-4xl {
-        font-size: 2rem;
-      }
-      
-      .card {
-        padding: 1.25rem;
+      section {
+        padding: 8rem 2rem;
       }
     }
     
-    /* Additional styles for elements */
-    .section-padding {
-      padding: 4rem 1rem;
-    }
-    
-    .min-h-screen {
-      min-height: 100vh;
-    }
-    
-    .pt-20 {
-      padding-top: 5rem;
-    }
-    
-    .leading-tight {
-      line-height: 1.25;
-    }
-    
-    .object-cover {
-      object-fit: cover;
-    }
-    
-    /* Mobile menu */
-    .mobile-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.95);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem 0;
-      display: none;
-    }
-    
-    .mobile-menu.active {
-      display: block;
-      animation: fade-in 0.3s ease-out;
-    }
-    
-    .space-x-6 > * + * {
-      margin-left: 1.5rem;
-    }
-    
-    /* Chat simulation */
-    .chat-container {
-      position: relative;
-      width: 100%;
-      max-width: 360px;
-      aspect-ratio: 9/16;
-      background-color: black;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 0.75rem;
-      overflow: hidden;
-    }
-    
-    .chat-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-    }
-    
-    .chat-header {
-      position: absolute;
-      inset-x: 0;
-      top: 0;
-      height: 3.5rem;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      padding: 0 1rem;
-      z-index: 1;
-    }
-    
-    .chat-body {
-      position: absolute;
-      inset-x: 0;
-      bottom: 0;
-      top: 3.5rem;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      overflow-y: auto;
-      padding-bottom: 5rem;
-    }
-    
-    .message {
-      padding: 0.75rem;
-      font-size: 0.875rem;
-      border-radius: 0.5rem;
-      max-width: 80%;
-    }
-    
-    .message-received {
-      background-color: rgba(37, 211, 102, 0.1);
-      backdrop-filter: blur(4px);
-      border-bottom-left-radius: 0;
-      align-self: flex-start;
-    }
-    
-    .message-sent {
-      background-color: rgba(0, 191, 255, 0.1);
-      backdrop-filter: blur(4px);
-      border-bottom-right-radius: 0;
-      align-self: flex-end;
-    }
-    
-    .chat-input {
-      position: absolute;
-      inset-x: 0;
-      bottom: 0;
-      padding: 0.75rem;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      z-index: 1;
-    }
-    
-    .chat-input-field {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 9999px;
-      height: 2.5rem;
-      flex-grow: 1;
-      padding: 0 1rem;
-      color: rgba(255, 255, 255, 0.5);
-      display: flex;
-      align-items: center;
-      font-size: 0.875rem;
-    }
-    
-    .chat-send-button {
-      height: 2.5rem;
-      width: 2.5rem;
-      background-color: #25D366;
-      border-radius: 9999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    /* Time text */
-    .time-text {
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.6);
-      margin-top: 0.25rem;
-      text-align: right;
-    }
-    
-    /* Audio message */
-    .audio-indicator {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.8);
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
     }
   </style>
 </head>
@@ -788,64 +1099,46 @@
       
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-6">
-        <a href="#how-it-works" class="text-white/80 hover:text-white transition-colors">
-          Como Funciona
-        </a>
-        <a href="#comparison" class="text-white/80 hover:text-white transition-colors">
-          Por Que IA?
-        </a>
-        <a href="#testimonials" class="text-white/80 hover:text-white transition-colors">
-          Depoimentos
-        </a>
-        <a href="#contact" class="btn-whatsapp">
-          Começar Agora
+        <a href="#how-it-works" class="text-white/80 hover:text-white">Como Funciona</a>
+        <a href="#comparison" class="text-white/80 hover:text-white">Por Que IA?</a>
+        <a href="#testimonials" class="text-white/80 hover:text-white">Depoimentos</a>
+        <a href="#contact" class="btn btn-whatsapp flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+          <span>Começar Agora</span>
         </a>
       </div>
       
-      <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-toggle" class="md:hidden text-white">
+      <!-- Mobile Menu Button -->
+      <div id="mobile-menu-button" class="md:hidden text-white cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-      
-      <!-- Mobile Menu Panel -->
-      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-black/95 border-t border-white/10">
-        <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-          <a 
-            href="#how-it-works" 
-            class="text-white/80 hover:text-white py-2 transition-colors"
-          >
-            Como Funciona
-          </a>
-          <a 
-            href="#comparison" 
-            class="text-white/80 hover:text-white py-2 transition-colors"
-          >
-            Por Que IA?
-          </a>
-          <a 
-            href="#testimonials" 
-            class="text-white/80 hover:text-white py-2 transition-colors"
-          >
-            Depoimentos
-          </a>
-          <a 
-            href="#contact" 
-            class="btn-whatsapp w-full flex justify-center"
-          >
-            Começar Agora
-          </a>
-        </div>
       </div>
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden">
+    <div class="flex justify-end mb-4">
+      <div id="close-menu" class="cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </div>
+    </div>
+    <a href="#how-it-works" class="text-white/80 hover:text-white py-2">Como Funciona</a>
+    <a href="#comparison" class="text-white/80 hover:text-white py-2">Por Que IA?</a>
+    <a href="#testimonials" class="text-white/80 hover:text-white py-2">Depoimentos</a>
+    <a href="#contact" class="btn btn-whatsapp mt-4 flex items-center justify-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
+      <span>Começar Agora</span>
+    </a>
+  </div>
+  <div id="menu-overlay"></div>
+
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black" id="hero">
     <!-- Background elements -->
     <div class="hero-glow bg-whatsapp" style="top: 25%; left: 25%;"></div>
     <div class="hero-glow bg-neonBlue" style="bottom: 33%; right: 25%;"></div>
     
-    <div class="container mx-auto px-4 z-10">
+    <div class="container z-10">
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="w-full lg:w-1/2 space-y-8 animate-fade-in">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -857,11 +1150,11 @@
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#demo" class="btn-whatsapp">
+            <a href="#demo" class="btn btn-whatsapp flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
               <span>Veja a IA em ação</span>
             </a>
-            <a href="#how-it-works" class="btn-secondary">
+            <a href="#how-it-works" class="btn btn-secondary">
               Saiba como funciona
             </a>
           </div>
@@ -883,7 +1176,7 @@
         </div>
         
         <div class="w-full lg:w-1/2 flex justify-center">
-          <div class="chat-container">
+          <div id="chat-simulator" class="chat-container gradient-border invisible">
             <div class="chat-bg"></div>
             
             <!-- WhatsApp-like header -->
@@ -897,50 +1190,17 @@
               </div>
             </div>
             
-            <!-- Chat messages -->
-            <div class="chat-body">
-              <div class="message message-sent">
-                Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.
-                <div class="time-text">14:30</div>
-              </div>
-              
-              <div class="message message-received">
-                Olá! Que bom que você está aqui 💚
-                <div class="time-text">14:31</div>
-              </div>
-              
-              <div class="message message-received">
-                Eu faço parte da equipe da Dra. Renata e posso te ajudar.
-                <div class="time-text">14:31</div>
-              </div>
-              
-              <div class="message message-received">
-                Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨
-                <div class="time-text">14:31</div>
-              </div>
-              
-              <div class="message message-sent">
-                Quero melhorar meu queixo e parecer menos cansada.
-                <div class="time-text">14:32</div>
-              </div>
-              
-              <div class="message message-received">
-                Esse é um dos tratamentos mais solicitados na clínica!
-                <div class="time-text">14:32</div>
-              </div>
-              
-              <div class="message message-received">
-                Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?
-                <div class="time-text">14:32</div>
-              </div>
+            <!-- Chat messages container -->
+            <div class="chat-messages">
+              <!-- Messages will be added via JS -->
             </div>
             
             <!-- Input field (decoration only) -->
             <div class="chat-input">
-              <div class="chat-input-field">
+              <div class="bg-white/10 rounded-full h-10 flex-grow px-4 text-white/50 flex items-center text-sm">
                 Digite sua mensagem...
               </div>
-              <div class="chat-send-button">
+              <div class="h-10 w-10 bg-whatsapp rounded-full flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
               </div>
             </div>
@@ -952,10 +1212,10 @@
 
   <!-- Pain Points Section -->
   <section class="section-padding bg-black" id="pain-points">
-    <div class="container mx-auto">
+    <div class="container">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Você Está <span class="text-red-500">Perdendo Vendas</span> Todos os Dias?
+          Você Está <span style="color: #ef4444;">Perdendo Vendas</span> Todos os Dias?
         </h2>
         <p class="text-xl text-white/70 max-w-2xl mx-auto">
           Respostas lentas matam conversões. Clientes esperam respostas imediatas, ou procuram outro lugar.
@@ -998,7 +1258,7 @@
         <p class="text-2xl font-medium mb-6">
           <span class="gradient-text">E se seu negócio pudesse responder instantaneamente, 24/7?</span>
         </p>
-        <a href="#demo" class="btn-whatsapp inline-flex">
+        <a href="#demo" class="btn btn-whatsapp inline-flex">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
           <span>Veja a IA de Conversão em Ação</span>
         </a>
@@ -1056,10 +1316,10 @@
       </div>
       
       <!-- Demo Chat -->
-      <div class="max-w-lg mx-auto card gradient-border">
+      <div id="demo-chat" class="max-w-lg mx-auto card gradient-border invisible">
         <!-- WhatsApp header -->
-        <div style="background-color: rgba(37, 211, 102, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-          <div style="height: 2.5rem; width: 2.5rem; border-radius: 9999px; background: linear-gradient(to right, #25D366, #00bfff); display: flex; align-items: center; justify-content: center;">
+        <div class="bg-whatsapp/10 border-b border-white/10 p-4 flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full bg-gradient-to-r from-whatsapp to-neonBlue flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
           </div>
           <div>
@@ -1071,38 +1331,38 @@
         <!-- Chat messages -->
         <div class="p-4 space-y-4">
           <div class="flex justify-end">
-            <div class="message message-sent">
-              <div class="audio-indicator">
+            <div class="bg-neonBlue/20 rounded-lg rounded-br-none ml-auto p-3 max-w-[80%] demo-message">
+              <div class="flex items-center gap-2 mb-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-                <span>Mensagem de áudio recebida</span>
+                <span class="text-xs text-white/80">Mensagem de áudio recebida</span>
               </div>
-              <p>Oi, vi o anúncio de harmonização e queria perguntar se vocês também fazem preenchimento no queixo?</p>
-              <div class="time-text">14:32</div>
+              <p class="text-sm">Oi, vi o anúncio de harmonização e queria perguntar se vocês também fazem preenchimento no queixo?</p>
+              <p class="text-xs text-white/60 mt-1 text-right">14:32</p>
             </div>
           </div>
           
           <div class="flex justify-start">
-            <div class="message message-received">
-              <div class="audio-indicator">
+            <div class="bg-whatsapp/20 rounded-lg rounded-bl-none mr-auto p-3 max-w-[80%] demo-message">
+              <div class="flex items-center gap-2 mb-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z"></path><path d="M8 12a4.14 4.14 0 0 0 1.2 3 4 4 0 0 0 1.59 1 3.93 3.93 0 0 0 1.69.1 4 4 0 0 0 1.45-.59A3.89 3.89 0 0 0 15 14"></path></svg>
-                <span>Resposta em áudio enviada</span>
+                <span class="text-xs text-white/80">Resposta em áudio enviada</span>
               </div>
-              <p>Sim! Preenchimento no queixo é um dos procedimentos mais populares. Gostaria que eu explicasse como funciona ou quer agendar uma consulta?</p>
-              <div class="time-text">14:32</div>
+              <p class="text-sm">Sim! Preenchimento no queixo é um dos procedimentos mais populares. Gostaria que eu explicasse como funciona ou quer agendar uma consulta?</p>
+              <p class="text-xs text-white/60 mt-1 text-right">14:32</p>
             </div>
           </div>
           
           <div class="flex justify-end">
-            <div class="message message-sent">
-              <p>Por favor, explique primeiro.</p>
-              <div class="time-text">14:33</div>
+            <div class="bg-neonBlue/20 rounded-lg rounded-br-none ml-auto p-3 max-w-[80%] demo-message">
+              <p class="text-sm">Por favor, explique primeiro.</p>
+              <p class="text-xs text-white/60 mt-1 text-right">14:33</p>
             </div>
           </div>
           
           <div class="flex justify-start">
-            <div class="message message-received">
-              <p>Claro! É rápido e fica muito natural. Você tem alguma foto de referência ou quer que eu te envie exemplos?</p>
-              <div class="time-text">14:33</div>
+            <div class="bg-whatsapp/20 rounded-lg rounded-bl-none mr-auto p-3 max-w-[80%] demo-message">
+              <p class="text-sm">Claro! É rápido e fica muito natural. Você tem alguma foto de referência ou quer que eu te envie exemplos?</p>
+              <p class="text-xs text-white/60 mt-1 text-right">14:33</p>
             </div>
           </div>
         </div>
@@ -1113,7 +1373,7 @@
           Seu negócio poderia estar convertendo leads em clientes 24 horas por dia, mesmo enquanto você dorme.
         </p>
         <a href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
-           class="btn-whatsapp inline-flex"
+           class="btn btn-whatsapp inline-flex"
            target="_blank"
            rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
@@ -1186,7 +1446,7 @@
           </div>
         </div>
         
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 space-y-6 gradient-border">
+        <div class="card gradient-border space-y-6">
           <h3 class="text-2xl font-bold mb-6">O Que Você Recebe:</h3>
           
           <div class="space-y-4">
@@ -1227,7 +1487,7 @@
           </div>
           
           <div class="mt-8 pt-6 border-t border-white/10">
-            <a href="#contact" class="btn-whatsapp w-full">
+            <a href="#contact" class="btn btn-whatsapp w-full flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
               <span>Comece em 48 Horas</span>
             </a>
@@ -1302,7 +1562,7 @@
           </div>
           
           <div class="text-center mb-6 md:mb-8">
-            <div class="h-20 w-20 rounded-full mx-auto flex items-center justify-center mb-4" style="background: linear-gradient(to right, #25D366, #00bfff);">
+            <div class="h-20 w-20 rounded-full mx-auto flex items-center justify-center mb-4 bg-gradient-to-r from-whatsapp to-neonBlue">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg>
             </div>
             <h3 class="text-2xl font-bold">IA de Conversão</h3>
@@ -1344,7 +1604,7 @@
           </div>
           
           <div class="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/10">
-            <a href="#contact" class="btn-whatsapp w-full">
+            <a href="#contact" class="btn btn-whatsapp w-full flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
               <span>Obtenha sua IA de Conversão</span>
             </a>
@@ -1453,7 +1713,7 @@
         <p class="text-xl mb-6">
           Junte-se a centenas de empresas que transformaram sua comunicação com clientes
         </p>
-        <a href="#contact" class="btn-whatsapp inline-flex">
+        <a href="#contact" class="btn btn-whatsapp inline-flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
           <span>Obtenha seu Agente de IA</span>
         </a>
@@ -1483,7 +1743,7 @@
             href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
             target="_blank" 
             rel="noopener noreferrer"
-            class="btn-whatsapp inline-flex text-lg px-10 py-4"
+            class="btn btn-whatsapp inline-flex items-center gap-2 text-lg px-10 py-4"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path></svg>
             <span>Ativar minha IA no WhatsApp agora</span>
@@ -1492,6 +1752,11 @@
       </div>
     </div>
   </section>
+
+  <!-- Scroll to top button -->
+  <div id="scroll-top" class="scroll-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-black border-t border-white/10 py-10 px-4">
@@ -1537,41 +1802,247 @@
     </div>
   </footer>
 
-  <!-- Simple JavaScript for Mobile Menu Toggle -->
+  <!-- JavaScript for interactive elements -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const closeMenuButton = document.getElementById('close-menu');
       const mobileMenu = document.getElementById('mobile-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
       
-      if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        menuOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        menuOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      
+      mobileMenuButton.addEventListener('click', openMenu);
+      closeMenuButton.addEventListener('click', closeMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+      
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+      
+      // Scroll to top button
+      const scrollTopButton = document.getElementById('scroll-top');
+      
+      function toggleScrollButton() {
+        if (window.pageYOffset > 300) {
+          scrollTopButton.classList.add('visible');
+        } else {
+          scrollTopButton.classList.remove('visible');
+        }
+      }
+      
+      scrollTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
         });
+      });
+      
+      window.addEventListener('scroll', toggleScrollButton);
+      toggleScrollButton(); // Initial check
+      
+      // Chat Simulator
+      const chatSimulator = document.getElementById('chat-simulator');
+      const conversation = [
+        { 
+          role: "client", 
+          message: "Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.",
+          delay: 0 
+        },
+        { 
+          role: "ai", 
+          message: "Olá! Que bom que você está aqui 💚",
+          delay: 1000 
+        },
+        { 
+          role: "ai", 
+          message: "Eu faço parte da equipe da Dra. Renata e posso te ajudar.",
+          delay: 2000 
+        },
+        { 
+          role: "ai", 
+          message: "Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨",
+          delay: 3000 
+        },
+        { 
+          role: "client", 
+          message: "Quero melhorar meu queixo e parecer menos cansada.",
+          delay: 5000 
+        },
+        { 
+          role: "ai", 
+          message: "Esse é um dos tratamentos mais solicitados na clínica!",
+          delay: 6000 
+        },
+        { 
+          role: "ai", 
+          message: "Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?",
+          delay: 7000 
+        },
+      ];
+      
+      const chatMessages = chatSimulator.querySelector('.chat-messages');
+      let chatAnimationStarted = false;
+      
+      function createMessageElement(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${message.role === 'client' ? 'client-message' : 'ai-message'}`;
+        messageDiv.textContent = message.message;
+        return messageDiv;
+      }
+      
+      function createTypingIndicator() {
+        const indicatorDiv = document.createElement('div');
+        indicatorDiv.className = 'typing-indicator';
         
-        // Close mobile menu when clicking on a navigation link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
-          });
+        for (let i = 0; i < 3; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'typing-dot';
+          indicatorDiv.appendChild(dot);
+        }
+        
+        return indicatorDiv;
+      }
+      
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+        );
+      }
+      
+      function startChatAnimation() {
+        if (chatAnimationStarted) return;
+        chatAnimationStarted = true;
+        
+        chatSimulator.classList.add('animation-active');
+        chatSimulator.classList.add('visible');
+        
+        let typingIndicator = null;
+        let timeouts = [];
+        
+        // Show first message immediately
+        const firstMessage = createMessageElement(conversation[0]);
+        chatMessages.appendChild(firstMessage);
+        setTimeout(() => {
+          firstMessage.style.opacity = '1';
+          firstMessage.style.transform = 'translateY(0)';
+        }, 100);
+        
+        // For each subsequent message, set up a timeout for typing and display
+        conversation.forEach((msg, index) => {
+          if (index === 0) return; // Skip the first message
+          
+          const delay = msg.delay;
+          
+          // First show typing indicator
+          const typingTimeout = setTimeout(() => {
+            // Remove previous typing indicator if it exists
+            if (typingIndicator && typingIndicator.parentNode) {
+              chatMessages.removeChild(typingIndicator);
+            }
+            
+            // Only show typing indicator for AI messages
+            if (msg.role === 'ai') {
+              typingIndicator = createTypingIndicator();
+              chatMessages.appendChild(typingIndicator);
+              setTimeout(() => {
+                typingIndicator.style.opacity = '1';
+              }, 100);
+            }
+            
+            // After a brief typing period, show the message and remove typing indicator
+            const messageTimeout = setTimeout(() => {
+              if (typingIndicator && typingIndicator.parentNode && msg.role === 'ai') {
+                chatMessages.removeChild(typingIndicator);
+              }
+              
+              const messageElement = createMessageElement(msg);
+              chatMessages.appendChild(messageElement);
+              
+              // Force reflow to ensure the animation starts properly
+              void messageElement.offsetWidth;
+              
+              setTimeout(() => {
+                messageElement.style.opacity = '1';
+                messageElement.style.transform = 'translateY(0)';
+              }, 100);
+              
+              // Scroll to the bottom of the chat
+              chatMessages.scrollTop = chatMessages.scrollHeight;
+              
+            }, msg.role === 'ai' ? 800 : 100); // Typing time before message appears
+            
+            timeouts.push(messageTimeout);
+          }, delay);
+          
+          timeouts.push(typingTimeout);
         });
       }
       
-      // Add scrolling effect to navbar
-      const navbar = document.querySelector('.navbar');
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 20) {
-          navbar.style.padding = '0.75rem 0';
-          navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-        } else {
-          navbar.style.padding = '1rem 0';
-          navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-        }
-      });
+      // Demo chat animation
+      const demoChat = document.getElementById('demo-chat');
+      let demoAnimationStarted = false;
+      
+      function startDemoAnimation() {
+        if (demoAnimationStarted) return;
+        demoAnimationStarted = true;
+        
+        demoChat.classList.add('visible');
+        
+        const messages = demoChat.querySelectorAll('.demo-message');
+        messages.forEach((msg, index) => {
+          setTimeout(() => {
+            msg.style.opacity = '1';
+            msg.style.transform = 'translateY(0)';
+          }, 300 * (index + 1));
+        });
+      }
+      
+      // Intersection Observer for animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+      };
+      
+      const chatObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startChatAnimation();
+            chatObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      const demoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startDemoAnimation();
+            demoObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      chatObserver.observe(chatSimulator);
+      demoObserver.observe(demoChat);
       
       // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
           e.preventDefault();
           
           const targetId = this.getAttribute('href');
@@ -1580,7 +2051,7 @@
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 80, // Adjust for navbar height
+              top: targetElement.offsetTop - 80, // Accounting for fixed header
               behavior: 'smooth'
             });
           }
@@ -1588,6 +2059,5 @@
       });
     });
   </script>
-  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </body>
 </html>
