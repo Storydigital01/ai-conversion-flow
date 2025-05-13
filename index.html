@@ -8,6 +8,8 @@
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <style>
     /* Base styles */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
     * {
       margin: 0;
       padding: 0;
@@ -167,6 +169,14 @@
       justify-content: space-between;
     }
     
+    .gap-2 {
+      gap: 0.5rem;
+    }
+    
+    .gap-3 {
+      gap: 0.75rem;
+    }
+    
     .gap-4 {
       gap: 1rem;
     }
@@ -177,6 +187,22 @@
     
     .gap-8 {
       gap: 2rem;
+    }
+    
+    .gap-12 {
+      gap: 3rem;
+    }
+    
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+    
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .mb-3 {
+      margin-bottom: 0.75rem;
     }
     
     .mb-4 {
@@ -199,6 +225,14 @@
       margin-bottom: 4rem;
     }
     
+    .mr-3 {
+      margin-right: 0.75rem;
+    }
+    
+    .mt-1 {
+      margin-top: 0.25rem;
+    }
+    
     .mt-4 {
       margin-top: 1rem;
     }
@@ -219,6 +253,23 @@
       margin-top: 4rem;
     }
     
+    .ml-auto {
+      margin-left: auto;
+    }
+    
+    .mr-auto {
+      margin-right: auto;
+    }
+    
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .p-3 {
+      padding: 0.75rem;
+    }
+    
     .p-4 {
       padding: 1rem;
     }
@@ -231,12 +282,55 @@
       padding: 2rem;
     }
     
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+    
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    
     .pt-6 {
       padding-top: 1.5rem;
     }
     
+    .pt-8 {
+      padding-top: 2rem;
+    }
+    
     .pb-3 {
       padding-bottom: 0.75rem;
+    }
+    
+    .pb-10 {
+      padding-bottom: 2.5rem;
     }
     
     /* Grid */
@@ -246,6 +340,14 @@
     
     .grid-cols-1 {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     
     /* Borders */
@@ -261,8 +363,44 @@
       border-color: rgba(255, 255, 255, 0.1);
     }
     
+    .border-white\/20 {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
     .border-whatsapp {
       border-color: #25D366;
+    }
+    
+    .border {
+      border: 1px solid;
+    }
+    
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+    
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+    
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+    
+    .rounded-full {
+      border-radius: 9999px;
+    }
+    
+    .rounded-bl-lg {
+      border-bottom-left-radius: 0.5rem;
+    }
+    
+    .rounded-bl-none {
+      border-bottom-left-radius: 0;
+    }
+    
+    .rounded-br-none {
+      border-bottom-right-radius: 0;
     }
     
     /* Text utilities */
@@ -278,6 +416,10 @@
       color: white;
     }
     
+    .text-white\/80 {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
     .text-white\/70 {
       color: rgba(255, 255, 255, 0.7);
     }
@@ -290,6 +432,10 @@
       color: #25D366;
     }
     
+    .text-black {
+      color: #000;
+    }
+    
     .text-red-500 {
       color: #ef4444;
     }
@@ -298,8 +444,16 @@
       color: #eab308;
     }
     
+    .text-xs {
+      font-size: 0.75rem;
+    }
+    
     .text-sm {
       font-size: 0.875rem;
+    }
+    
+    .text-base {
+      font-size: 1rem;
     }
     
     .text-lg {
@@ -326,8 +480,16 @@
       font-weight: 500;
     }
     
+    .font-semibold {
+      font-weight: 600;
+    }
+    
     .font-bold {
       font-weight: 700;
+    }
+    
+    .leading-tight {
+      line-height: 1.25;
     }
     
     /* Utilities */
@@ -339,36 +501,136 @@
       position: absolute;
     }
     
+    .fixed {
+      position: fixed;
+    }
+    
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .inset-x-0 {
+      left: 0;
+      right: 0;
+    }
+    
+    .top-0 {
+      top: 0;
+    }
+    
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .left-0 {
+      left: 0;
+    }
+    
+    .right-0 {
+      right: 0;
+    }
+    
+    .top-1\/4 {
+      top: 25%;
+    }
+    
+    .bottom-1\/3 {
+      bottom: 33%;
+    }
+    
+    .left-1\/4 {
+      left: 25%;
+    }
+    
+    .right-1\/4 {
+      right: 25%;
+    }
+    
+    .top-14 {
+      top: 3.5rem;
+    }
+    
+    .bottom-20 {
+      bottom: 5rem;
+    }
+    
+    .z-0 {
+      z-index: 0;
+    }
+    
     .z-10 {
       z-index: 10;
+    }
+    
+    .z-50 {
+      z-index: 50;
+    }
+    
+    .z-100 {
+      z-index: 100;
     }
     
     .overflow-hidden {
       overflow: hidden;
     }
     
-    .rounded-xl {
-      border-radius: 0.75rem;
+    .overflow-y-auto {
+      overflow-y: auto;
     }
     
-    .rounded-lg {
-      border-radius: 0.5rem;
-    }
-    
-    .rounded-full {
-      border-radius: 9999px;
-    }
-    
-    .rounded-bl-lg {
-      border-bottom-left-radius: 0.5rem;
+    .overflow-x-hidden {
+      overflow-x: hidden;
     }
     
     .shadow-lg {
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
     
+    .shadow-black\/20 {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .shadow-black\/30 {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .shadow-whatsapp\/10 {
+      box-shadow: 0 4px 6px -1px rgba(37, 211, 102, 0.1);
+    }
+    
+    .shadow-whatsapp\/20 {
+      box-shadow: 0 4px 6px -1px rgba(37, 211, 102, 0.2);
+    }
+    
     .w-full {
       width: 100%;
+    }
+    
+    .h-full {
+      height: 100%;
+    }
+    
+    .min-h-screen {
+      min-height: 100vh;
+    }
+    
+    .w-2 {
+      width: 0.5rem;
+    }
+    
+    .h-2 {
+      height: 0.5rem;
+    }
+    
+    .w-4\/5 {
+      width: 80%;
+    }
+    
+    .w-1\/2 {
+      width: 50%;
     }
     
     .max-w-xl {
@@ -389,11 +651,6 @@
     
     .max-w-lg {
       max-width: 32rem;
-    }
-    
-    .mx-auto {
-      margin-left: auto;
-      margin-right: auto;
     }
     
     .h-6 {
@@ -428,6 +685,10 @@
       width: 3rem;
     }
     
+    .h-14 {
+      height: 3.5rem;
+    }
+    
     .h-20 {
       height: 5rem;
     }
@@ -436,12 +697,24 @@
       width: 5rem;
     }
     
+    .h-50px {
+      height: 50px;
+    }
+    
+    .w-50px {
+      width: 50px;
+    }
+    
     .inline-flex {
       display: inline-flex;
     }
     
     .flex-shrink-0 {
       flex-shrink: 0;
+    }
+    
+    .flex-grow {
+      flex-grow: 1;
     }
     
     .space-y-4 > * + * {
@@ -471,10 +744,100 @@
       --tw-gradient-to: #111827;
     }
     
-    .from-gray-900 {
-      --tw-gradient-from: #111827;
-      --tw-gradient-to: rgba(17, 24, 39, 0);
-      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    .bg-black {
+      background-color: #000;
+    }
+    
+    .bg-white\/5 {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .bg-whatsapp\/10 {
+      background-color: rgba(37, 211, 102, 0.1);
+    }
+    
+    .bg-whatsapp\/20 {
+      background-color: rgba(37, 211, 102, 0.2);
+    }
+    
+    .bg-neonBlue\/10 {
+      background-color: rgba(0, 191, 255, 0.1);
+    }
+    
+    .bg-red-500\/20 {
+      background-color: rgba(239, 68, 68, 0.2);
+    }
+    
+    .bg-black\/50 {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .bg-black\/80 {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .bg-white\/10 {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+    }
+    
+    .backdrop-blur-md {
+      backdrop-filter: blur(8px);
+    }
+    
+    /* Animation */
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    
+    @keyframes bubble-in {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .animate-bubble-in {
+      animation: bubble-in 0.3s ease-out forwards;
+    }
+    
+    /* Transition */
+    .transition-colors {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .transition-opacity {
+      transition-property: opacity;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .duration-300 {
+      transition-duration: 300ms;
     }
     
     /* Navigation styles */
@@ -484,42 +847,10 @@
       left: 0;
       width: 100%;
       z-index: 50;
-      padding: 1rem 0;
+      padding: 1.25rem 0;
       transition: all 0.3s ease;
       background-color: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(8px);
-    }
-    
-    /* Chat Animation */
-    .chat-message {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    
-    .chat-message.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .chat-message-delay-1 {
-      transition-delay: 0.1s;
-    }
-    
-    .chat-message-delay-2 {
-      transition-delay: 0.2s;
-    }
-    
-    .chat-message-delay-3 {
-      transition-delay: 0.3s;
-    }
-    
-    .chat-message-delay-4 {
-      transition-delay: 0.4s;
-    }
-    
-    .chat-message-delay-5 {
-      transition-delay: 0.5s;
     }
     
     /* Scroll to top button */
@@ -533,7 +864,6 @@
       border-radius: 50%;
       width: 50px;
       height: 50px;
-      font-size: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -548,7 +878,18 @@
       opacity: 1;
     }
     
+    /* Section padding */
+    .section-padding {
+      padding: 2.5rem 1rem;
+    }
+    
     /* Responsive */
+    @media (min-width: 640px) {
+      .sm\:flex-row {
+        flex-direction: row;
+      }
+    }
+    
     @media (min-width: 768px) {
       .md\:flex {
         display: flex;
@@ -562,12 +903,28 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
       
+      .md\:space-y-6 > * + * {
+        margin-top: 1.5rem;
+      }
+      
       .md\:mb-0 {
         margin-bottom: 0;
       }
       
+      .md\:mb-8 {
+        margin-bottom: 2rem;
+      }
+      
       .md\:mb-16 {
         margin-bottom: 4rem;
+      }
+      
+      .md\:mt-8 {
+        margin-top: 2rem;
+      }
+      
+      .md\:gap-8 {
+        gap: 2rem;
       }
       
       .md\:text-4xl {
@@ -591,8 +948,21 @@
         padding-right: 2rem;
       }
       
-      .md\:w-1\/2 {
-        width: 50%;
+      .md\:py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      .md\:pt-6 {
+        padding-top: 1.5rem;
+      }
+      
+      .md\:flex-row {
+        flex-direction: row;
+      }
+      
+      .section-padding {
+        padding: 4rem 1rem;
       }
     }
     
@@ -608,60 +978,79 @@
       .lg\:w-1\/2 {
         width: 50%;
       }
+      
+      .lg\:px-12 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+      
+      .section-padding {
+        padding: 5rem 1rem;
+      }
     }
     
-    /* Imported fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+      
+      h2 {
+        font-size: 1.75rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .section-padding {
+        padding: 2rem 1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="container flex justify-between items-center">
-      <div class="gradient-text text-2xl font-bold">ConversãoIA</div>
-      
-      <!-- Desktop Menu - Only showing logo as requested -->
-      <!-- All navigation links removed as per request -->
-      
-      <!-- Mobile Menu - Completely hidden as requested -->
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="text-2xl font-bold gradient-text">ConversãoIA</div>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
     <!-- Background elements -->
-    <div class="hero-glow bg-whatsapp" style="top: 25%; left: 25%;"></div>
-    <div class="hero-glow bg-neonBlue" style="bottom: 33%; right: 25%;"></div>
+    <div class="hero-glow bg-whatsapp top-1/4 left-1/4"></div>
+    <div class="hero-glow bg-neonBlue bottom-1/3 right-1/4"></div>
     
-    <div class="container z-10">
+    <div class="container mx-auto px-4 z-10">
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="w-full lg:w-1/2 space-y-8">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Agentes de WhatsApp com <span style="color: #25D366;">tecnologia IA</span> que convertem
+            Agentes de WhatsApp com <span class="text-whatsapp">tecnologia IA</span> que convertem
           </h1>
           
           <p class="text-lg md:text-xl text-white/80 max-w-xl">
-            Construímos, treinamos e implementamos agentes de IA que gerenciam atendimento ao cliente e vendas 24/7 — para você nunca mais perder um lead.
+            Construímos, treinamos e implementamos agentes de IA que gerenciam atendimento ao cliente e vendas 24/7 — para você nunca mais perder uma venda.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#demo" class="btn btn-whatsapp">
+            <a href="#demo" class="btn-whatsapp flex items-center justify-center gap-2 px-8 py-3 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span>Veja a IA em ação</span>
             </a>
-            <a href="#how-it-works" class="btn btn-secondary">
+            <a href="#how-it-works" class="btn-secondary px-8 py-3 rounded-md">
               Saiba como funciona
             </a>
           </div>
           
-          <div class="pt-6 flex flex-col sm:flex-row gap-6 text-white/70">
+          <div class="pt-8 pb-10 flex flex-col sm:flex-row gap-6 text-white/70">
             <div class="flex items-center gap-2">
               <div class="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-              <span>Pronto em 48 horas</span>
+              <span>Sua IA ativa em até 48h</span>
             </div>
             <div class="flex items-center gap-2">
               <div class="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-              <span>Sem configuração necessária</span>
+              <span>Você não precisa mexer em nada</span>
             </div>
             <div class="flex items-center gap-2">
               <div class="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
@@ -671,59 +1060,32 @@
         </div>
         
         <div class="w-full lg:w-1/2 flex justify-center">
-          <div class="relative w-full max-w-md" style="aspect-ratio: 9/16; background: black; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 0.75rem; overflow: hidden;">
-            <div style="position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000'); background-size: cover; background-position: center; opacity: 0.2;"></div>
+          <div class="relative w-full max-w-md aspect-[9/16] bg-black border border-white/20 rounded-xl overflow-hidden gradient-border">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1633536726481-9a8597caa28b?q=80&w=1000')] bg-cover bg-center opacity-20"></div>
             
             <!-- WhatsApp-like header -->
-            <div style="position: absolute; inset-x: 0; top: 0; height: 3.5rem; background-color: rgba(0, 0, 0, 0.8); border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; padding: 0 1rem;">
-              <div style="width: 2rem; height: 2rem; border-radius: 9999px; background-color: #25D366; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div class="absolute inset-x-0 top-0 h-14 bg-black/80 border-b border-white/10 flex items-center px-4">
+              <div class="w-8 h-8 rounded-full bg-whatsapp flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </div>
               <div>
-                <div style="font-size: 0.875rem; font-weight: 500;">Clínica Dra. Renata</div>
-                <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6);">Online</div>
+                <div class="text-sm font-medium">Clínica Dra. Renata</div>
+                <div class="text-xs text-white/60">Online</div>
               </div>
             </div>
             
-            <!-- Chat messages -->
-            <div style="position: absolute; inset-x: 0; bottom: 0; top: 3.5rem; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; overflow-y: auto; padding-bottom: 5rem;">
-              <!-- Using chat-message class for animation -->
-              <div class="chat-message chat-message-delay-1" style="margin-left: auto; background-color: rgba(0, 191, 255, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; font-size: 0.875rem;">
-                Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.
-              </div>
-              
-              <div class="chat-message chat-message-delay-2" style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Olá! Que bom que você está aqui 💚
-              </div>
-              
-              <div class="chat-message chat-message-delay-3" style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Eu faço parte da equipe da Dra. Renata e posso te ajudar.
-              </div>
-              
-              <div class="chat-message chat-message-delay-4" style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨
-              </div>
-              
-              <div class="chat-message chat-message-delay-5" style="margin-left: auto; background-color: rgba(0, 191, 255, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; font-size: 0.875rem;">
-                Quero melhorar meu queixo e parecer menos cansada.
-              </div>
-              
-              <div class="chat-message chat-message-delay-5" style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Esse é um dos tratamentos mais solicitados na clínica!
-              </div>
-              
-              <div class="chat-message chat-message-delay-5" style="background-color: rgba(37, 211, 102, 0.1); backdrop-filter: blur(4px); border-radius: 0.5rem; border-bottom-left-radius: 0; width: 80%; padding: 0.75rem; font-size: 0.875rem;">
-                Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?
-              </div>
+            <!-- Chat messages container -->
+            <div class="absolute inset-x-0 bottom-20 top-14 p-4 flex flex-col gap-3 overflow-y-auto" id="chatContainer">
+              <!-- Chat messages will be dynamically added here by JavaScript -->
             </div>
             
             <!-- Input field (decoration only) -->
-            <div style="position: absolute; inset-x: 0; bottom: 0; padding: 0.75rem; background-color: rgba(0, 0, 0, 0.8); display: flex; align-items: center; gap: 0.5rem;">
-              <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 9999px; height: 2.5rem; flex-grow: 1; padding: 0 1rem; color: rgba(255, 255, 255, 0.5); display: flex; align-items: center; font-size: 0.875rem;">
+            <div class="absolute inset-x-0 bottom-0 p-3 bg-black/80 flex items-center gap-2">
+              <div class="bg-white/10 rounded-full h-10 flex-grow px-4 text-white/50 flex items-center text-sm">
                 Digite sua mensagem...
               </div>
-              <div style="height: 2.5rem; width: 2.5rem; background-color: #25D366; border-radius: 9999px; display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+              <div class="h-10 w-10 bg-whatsapp rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </div>
             </div>
           </div>
@@ -780,7 +1142,7 @@
         <p class="text-2xl font-medium mb-6">
           <span class="gradient-text">E se seu negócio pudesse responder instantaneamente, 24/7?</span>
         </p>
-        <a href="#demo" class="btn btn-whatsapp inline-flex">
+        <a href="#demo" class="btn-whatsapp inline-flex items-center justify-center gap-2 px-8 py-3 rounded-md">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           <span>Veja a IA de Conversão em Ação</span>
         </a>
@@ -791,8 +1153,8 @@
   <!-- Demo Section -->
   <section class="section-padding bg-black relative" id="demo">
     <!-- Glow effects -->
-    <div class="hero-glow bg-whatsapp" style="top: 25%; right: 25%;"></div>
-    <div class="hero-glow bg-neonBlue" style="bottom: 33%; left: 25%;"></div>
+    <div class="hero-glow bg-whatsapp top-1/4 right-1/4"></div>
+    <div class="hero-glow bg-neonBlue bottom-1/3 left-1/4"></div>
     
     <div class="container">
       <div class="text-center mb-10">
@@ -841,7 +1203,7 @@
       <div class="max-w-lg mx-auto card gradient-border">
         <!-- WhatsApp header -->
         <div style="background-color: rgba(37, 211, 102, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-          <div style="height: 2.5rem; width: 2.5rem; border-radius: 9999px; background: linear-gradient(to right, #25D366, #00bfff); display: flex; align-items: center; justify-content: center;">
+          <div style="height: 2.5rem; width: 2.5rem; border-radius: 9999px; background: linear-gradient(to right, #25D366, #00bfff); display: flex; align-items: center; justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           </div>
           <div>
@@ -850,10 +1212,10 @@
           </div>
         </div>
         
-        <!-- Chat messages -->
+        <!-- Chat messages (static for this section) -->
         <div class="p-4 space-y-4">
           <div class="flex justify-end">
-            <div class="chat-message chat-message-delay-1" style="background-color: rgba(0, 191, 255, 0.2); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; max-width: 80%; margin-left: auto;">
+            <div style="background-color: rgba(0, 191, 255, 0.2); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; max-width: 80%; margin-left: auto;">
               <div class="flex items-center gap-2 mb-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
                 <span class="text-xs text-white/80">Mensagem de áudio recebida</span>
@@ -864,7 +1226,7 @@
           </div>
           
           <div class="flex justify-start">
-            <div class="chat-message chat-message-delay-2" style="background-color: rgba(37, 211, 102, 0.2); border-radius: 0.5rem; border-bottom-left-radius: 0; padding: 0.75rem; max-width: 80%; margin-right: auto;">
+            <div style="background-color: rgba(37, 211, 102, 0.2); border-radius: 0.5rem; border-bottom-left-radius: 0; padding: 0.75rem; max-width: 80%; margin-right: auto;">
               <div class="flex items-center gap-2 mb-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z"></path><path d="M8 12a4.14 4.14 0 0 0 1.2 3 4 4 0 0 0 1.59 1 3.93 3.93 0 0 0 1.69.1 4 4 0 0 0 1.45-.59A3.89 3.89 0 0 0 15 14"></path></svg>
                 <span class="text-xs text-white/80">Resposta em áudio enviada</span>
@@ -875,14 +1237,14 @@
           </div>
           
           <div class="flex justify-end">
-            <div class="chat-message chat-message-delay-3" style="background-color: rgba(0, 191, 255, 0.2); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; max-width: 80%; margin-left: auto;">
+            <div style="background-color: rgba(0, 191, 255, 0.2); border-radius: 0.5rem; border-bottom-right-radius: 0; padding: 0.75rem; max-width: 80%; margin-left: auto;">
               <p class="text-sm">Por favor, explique primeiro.</p>
               <p class="text-xs text-white/60 mt-1 text-right">14:33</p>
             </div>
           </div>
           
           <div class="flex justify-start">
-            <div class="chat-message chat-message-delay-4" style="background-color: rgba(37, 211, 102, 0.2); border-radius: 0.5rem; border-bottom-left-radius: 0; padding: 0.75rem; max-width: 80%; margin-right: auto;">
+            <div style="background-color: rgba(37, 211, 102, 0.2); border-radius: 0.5rem; border-bottom-left-radius: 0; padding: 0.75rem; max-width: 80%; margin-right: auto;">
               <p class="text-sm">Claro! É rápido e fica muito natural. Você tem alguma foto de referência ou quer que eu te envie exemplos?</p>
               <p class="text-xs text-white/60 mt-1 text-right">14:33</p>
             </div>
@@ -895,7 +1257,7 @@
           Seu negócio poderia estar convertendo leads em clientes 24 horas por dia, mesmo enquanto você dorme.
         </p>
         <a href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
-           class="btn btn-whatsapp inline-flex"
+           class="btn-whatsapp inline-flex items-center justify-center gap-2 px-8 py-3 rounded-md"
            target="_blank"
            rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -1009,7 +1371,7 @@
           </div>
           
           <div class="mt-8 pt-6 border-t border-white/10">
-            <a href="#contact" class="btn btn-whatsapp w-full">
+            <a href="#contact" class="btn-whatsapp w-full flex items-center justify-center gap-2 px-8 py-3 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span>Comece em 48 Horas</span>
             </a>
@@ -1031,13 +1393,12 @@
         </p>
       </div>
       
-      <!-- Side by side comparison on desktop -->
       <div class="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
         <!-- Human Side -->
-        <div class="card border-white/10 rounded-xl shadow-lg" style="box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+        <div class="card border-white/10 rounded-xl shadow-lg shadow-black/20 hover:shadow-black/30 transition-all">
           <div class="text-center mb-6 md:mb-8">
             <div class="h-20 w-20 bg-white/10 rounded-full mx-auto flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </div>
             <h3 class="text-2xl font-bold">Funcionário</h3>
           </div>
@@ -1079,14 +1440,14 @@
         </div>
         
         <!-- AI Side -->
-        <div class="card border-whatsapp relative overflow-hidden rounded-xl shadow-lg" style="box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);">
+        <div class="card border-whatsapp relative overflow-hidden rounded-xl shadow-lg shadow-whatsapp/10 hover:shadow-whatsapp/20 transition-all">
           <div class="absolute top-0 right-0 bg-whatsapp text-black text-xs font-bold py-1 px-3 rounded-bl-lg">
             RECOMENDADO
           </div>
           
           <div class="text-center mb-6 md:mb-8">
-            <div class="h-20 w-20 rounded-full mx-auto flex items-center justify-center mb-4" style="background: linear-gradient(to right, #25D366, #00bfff);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div class="h-20 w-20 bg-gradient-to-r from-whatsapp to-neonBlue rounded-full mx-auto flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v12l-4-4-4 4-4-4-4 4V10a8 8 0 0 1 8-8z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg>
             </div>
             <h3 class="text-2xl font-bold">IA de Conversão</h3>
           </div>
@@ -1126,8 +1487,8 @@
             </div>
           </div>
           
-          <div class="mt-6 pt-4 border-t border-white/10">
-            <a href="#contact" class="btn btn-whatsapp w-full">
+          <div class="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/10">
+            <a href="#contact" class="btn-whatsapp w-full flex items-center justify-center gap-2 px-8 py-3 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span>Obtenha sua IA de Conversão</span>
             </a>
@@ -1140,11 +1501,11 @@
   <!-- CTA Section -->
   <section class="section-padding bg-black relative" id="contact">
     <!-- Glow effects -->
-    <div class="hero-glow bg-whatsapp" style="top: 25%; right: 25%;"></div>
-    <div class="hero-glow bg-neonBlue" style="bottom: 33%; left: 25%;"></div>
+    <div class="hero-glow bg-whatsapp top-1/4 right-1/4"></div>
+    <div class="hero-glow bg-neonBlue bottom-1/3 left-1/4"></div>
     
-    <div class="container relative z-10">
-      <div class="card gradient-border p-8 md:p-12 max-w-4xl mx-auto">
+    <div class="container mx-auto relative z-10">
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 md:p-12 max-w-4xl mx-auto gradient-border">
         <div class="text-center mb-10">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Pronto para <span class="gradient-text">aumentar suas vendas</span>?
@@ -1159,7 +1520,7 @@
             href="https://wa.me/5562998564787?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20agente%20de%20IA%20para%20minha%20empresa." 
             target="_blank" 
             rel="noopener noreferrer"
-            class="btn btn-whatsapp inline-flex text-lg px-10 py-4"
+            class="btn-whatsapp inline-flex items-center justify-center gap-2 text-lg px-10 py-4 rounded-md"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <span>Ativar minha IA no WhatsApp agora</span>
@@ -1194,35 +1555,160 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
+  <!-- Helper script for GitHub Pages redirection -->
   <script>
-    // Add animation to chat messages
-    function animateChatMessages() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-      
-      const chatMessages = document.querySelectorAll('.chat-message');
-      chatMessages.forEach(message => {
-        observer.observe(message);
-      });
+    // Simple redirect script for GitHub Pages
+    if (window.location.pathname === '/') {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+  <script>
+    // Define conversation message type
+    const conversation = [
+      { 
+        role: "client", 
+        message: "Oi, vi o anúncio sobre harmonização facial e gostaria de saber mais.",
+        delay: 0 
+      },
+      { 
+        role: "ai", 
+        message: "Olá! Que bom que você está aqui 💚",
+        delay: 1000 
+      },
+      { 
+        role: "ai", 
+        message: "Eu faço parte da equipe da Dra. Renata e posso te ajudar.",
+        delay: 2000 
+      },
+      { 
+        role: "ai", 
+        message: "Me conte — o que mais incomoda você no seu rosto hoje? Isso vai me ajudar a te orientar melhor ✨",
+        delay: 3000 
+      },
+      { 
+        role: "client", 
+        message: "Quero melhorar meu queixo e parecer menos cansada.",
+        delay: 5000 
+      },
+      { 
+        role: "ai", 
+        message: "Esse é um dos tratamentos mais solicitados na clínica!",
+        delay: 6000 
+      },
+      { 
+        role: "ai", 
+        message: "Gostaria que eu explicasse como funciona ou prefere agendar uma consulta com a doutora?",
+        delay: 7000 
+      },
+    ];
+    
+    // DOM elements
+    const chatContainer = document.getElementById('chatContainer');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    // Chat Animation Logic
+    let animationStarted = false;
+    let timeouts = [];
+    
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.7
+      );
     }
     
-    // Scroll to top functionality
-    window.onscroll = function() {
-      const scrollBtn = document.getElementById("scrollToTopBtn");
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollBtn.classList.add('visible');
+    // Function to create a message element
+    function createMessage(message) {
+      const messageDiv = document.createElement('div');
+      
+      if (message.role === "client") {
+        messageDiv.className = `ml-auto bg-neonBlue/10 backdrop-blur-sm rounded-lg rounded-br-none p-3 text-sm animate-bubble-in`;
       } else {
-        scrollBtn.classList.remove('visible');
+        messageDiv.className = `bg-whatsapp/10 backdrop-blur-sm rounded-lg rounded-bl-none w-4/5 p-3 text-sm animate-bubble-in`;
       }
-    };
+      
+      messageDiv.textContent = message.message;
+      return messageDiv;
+    }
     
+    // Function to create typing indicator
+    function createTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = "bg-whatsapp/10 backdrop-blur-sm p-3 rounded-lg rounded-bl-none w-4/5 text-sm";
+      typingDiv.innerHTML = `
+        <div class="flex items-center gap-2">
+          <div class="flex gap-1">
+            <div class="h-2 w-2 bg-white/70 rounded-full animate-pulse"></div>
+            <div class="h-2 w-2 bg-white/70 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+            <div class="h-2 w-2 bg-white/70 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+          </div>
+          <span class="text-xs text-white/70">digitando...</span>
+        </div>
+      `;
+      return typingDiv;
+    }
+    
+    // Function to start the chat animation
+    function startChatAnimation() {
+      if (animationStarted) return;
+      animationStarted = true;
+      
+      // Clear any existing timeouts
+      timeouts.forEach(timeout => clearTimeout(timeout));
+      timeouts = [];
+      
+      // Clear any existing messages
+      chatContainer.innerHTML = '';
+      
+      // Show first message immediately
+      chatContainer.appendChild(createMessage(conversation[0]));
+      
+      // For each subsequent message, set up a timeout for typing and display
+      for (let i = 1; i < conversation.length; i++) {
+        const message = conversation[i];
+        
+        // Create typing indicator timeout
+        const typingTimeout = setTimeout(() => {
+          const typingIndicator = createTypingIndicator();
+          chatContainer.appendChild(typingIndicator);
+          
+          // Create message display timeout
+          const messageTimeout = setTimeout(() => {
+            // Remove typing indicator and show message
+            chatContainer.removeChild(typingIndicator);
+            chatContainer.appendChild(createMessage(message));
+            
+            // Scroll to bottom of chat
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+          }, 1000); // Typing for 1 second
+          
+          timeouts.push(messageTimeout);
+        }, message.delay);
+        
+        timeouts.push(typingTimeout);
+      }
+    }
+    
+    // Handle scroll event to trigger chat animation
+    function handleScroll() {
+      if (chatContainer && !animationStarted) {
+        if (isInViewport(chatContainer)) {
+          startChatAnimation();
+        }
+      }
+      
+      // Show/hide scroll to top button
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    }
+    
+    // Function to scroll to top
     function scrollToTop() {
       window.scrollTo({
         top: 0,
@@ -1230,10 +1716,21 @@
       });
     }
     
-    // Initialize the page
+    // Initialize page
     document.addEventListener('DOMContentLoaded', function() {
-      animateChatMessages();
+      window.addEventListener('scroll', handleScroll);
+      
+      // Check if chat is already in viewport when page loads
+      if (chatContainer && isInViewport(chatContainer)) {
+        startChatAnimation();
+      }
+      
+      // Set scroll to top button functionality
+      if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', scrollToTop);
+      }
     });
   </script>
 </body>
 </html>
+
