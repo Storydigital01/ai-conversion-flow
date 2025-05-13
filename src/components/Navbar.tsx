@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav className={navClasses}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-2xl font-bold gradient-text">ConversionAI</div>
+        <div className="text-2xl font-bold gradient-text">ConversãoIA</div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">

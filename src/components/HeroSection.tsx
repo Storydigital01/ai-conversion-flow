@@ -133,7 +133,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 max-w-xl">
-              Construímos, treinamos e implementamos agentes de IA que gerenciam atendimento ao cliente e vendas 24/7 — para você nunca mais perder um lead.
+              Construímos, treinamos e implementamos agentes de IA que gerenciam atendimento ao cliente e vendas 24/7 — para você nunca mais perder uma venda.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -146,14 +146,14 @@ const HeroSection = () => {
               </a>
             </div>
             
-            <div className="pt-6 flex flex-col sm:flex-row gap-6 text-white/70">
+            <div className="pt-8 flex flex-col sm:flex-row gap-6 text-white/70 mb-8">
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-                <span>Pronto em 48 horas</span>
+                <span>Sua IA ativa em até 48h</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
-                <span>Sem configuração necessária</span>
+                <span>Você não precisa mexer em nada</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
@@ -178,7 +178,7 @@ const HeroSection = () => {
               </div>
               
               {/* Chat messages container */}
-              <div className="absolute inset-x-0 bottom-0 top-14 p-4 flex flex-col gap-3 overflow-y-auto pb-20">
+              <div className="absolute inset-x-0 bottom-20 top-14 p-4 flex flex-col gap-3 overflow-y-auto">
                 {visibleMessages.map((index) => {
                   const message = conversation[index];
                   return (
