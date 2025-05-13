@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <div className="text-2xl font-bold gradient-text mb-2">ConversãoIA</div>
+            <div className="text-2xl font-bold gradient-text mb-2">ConversionAI</div>
             <p className="text-white/60 text-sm">
               Agentes de WhatsApp com IA para empresas
             </p>
@@ -33,7 +33,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            © {currentYear} ConversãoIA. Todos os direitos reservados.
+            © {currentYear} ConversionAI. Todos os direitos reservados.
           </p>
           
           <div className="flex gap-6">
