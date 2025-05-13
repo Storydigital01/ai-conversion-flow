@@ -47,7 +47,7 @@ const DemoSection = () => {
       <div className="hero-glow bg-neonBlue bottom-1/3 left-1/4" />
       
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Veja Nossa <span className="gradient-text">IA de Conversão</span> em Ação
           </h2>
@@ -56,8 +56,8 @@ const DemoSection = () => {
           </p>
         </div>
         
-        {/* Adaptive AI Feature Box - Added before the chat demo */}
-        <div className="max-w-4xl mx-auto mb-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 gradient-border">
+        {/* Adaptive AI Feature Box - Added before the chat demo with improved spacing */}
+        <div className="max-w-4xl mx-auto mb-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 gradient-border">
           <h3 className="text-2xl font-bold mb-4 text-center">
             A IA <span className="gradient-text">se adapta</span> ao comportamento do seu lead
           </h3>

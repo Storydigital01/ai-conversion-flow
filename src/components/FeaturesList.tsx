@@ -3,7 +3,7 @@ import React from 'react';
 
 const FeaturesList = () => {
   return (
-    <div className="pt-8 flex flex-col sm:flex-row gap-6 text-white/70 mb-8">
+    <div className="pt-8 pb-10 flex flex-col sm:flex-row gap-6 text-white/70 mb-8">
       <div className="flex items-center gap-2">
         <div className="h-6 w-6 rounded-full bg-whatsapp flex items-center justify-center text-white text-xs">✓</div>
         <span>Sua IA ativa em até 48h</span>

@@ -90,7 +90,7 @@ const ChatSimulator = () => {
     };
   }, [animationStarted]);
 
-  // Function to start the chat animation
+  // Function to start the chat animation with a more pronounced delay
   const startChatAnimation = () => {
     setAnimationStarted(true);
     let timeouts: NodeJS.Timeout[] = [];
@@ -98,7 +98,7 @@ const ChatSimulator = () => {
     // Show first message immediately
     setVisibleMessages([0]);
 
-    // For each subsequent message, set up a timeout for typing and display
+    // For each subsequent message, set up a timeout for typing and display with a 1-second delay
     conversation.forEach((_, index) => {
       if (index === 0) return; // Skip the first message as it's shown immediately
       
@@ -108,11 +108,11 @@ const ChatSimulator = () => {
       const typingTimeout = setTimeout(() => {
         setTypingIndex(index);
         
-        // After a brief typing period, show the message and remove typing indicator
+        // After a brief typing period (1 second), show the message and remove typing indicator
         const messageTimeout = setTimeout(() => {
           setVisibleMessages(prev => [...prev, index]);
           setTypingIndex(null);
-        }, 800); // Typing time before message appears
+        }, 1000); // Increased typing time to 1 second before message appears
         
         timeouts.push(messageTimeout);
       }, delay);
@@ -142,7 +142,7 @@ const ChatSimulator = () => {
           </div>
         </div>
         
-        {/* Chat messages container */}
+        {/* Chat messages container - more bottom spacing */}
         <div className="absolute inset-x-0 bottom-20 top-14 p-4 flex flex-col gap-3 overflow-y-auto">
           {visibleMessages.map((index) => {
             const message = conversation[index];
@@ -159,13 +159,16 @@ const ChatSimulator = () => {
             );
           })}
           
-          {/* Typing indicator */}
+          {/* Enhanced typing indicator with "typing..." text */}
           {typingIndex !== null && (
             <div className="bg-whatsapp/10 backdrop-blur-sm p-3 rounded-lg rounded-bl-none w-4/5 text-sm">
-              <div className="flex gap-1">
-                <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse"></div>
-                <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+              <div className="flex items-center gap-2">
+                <div className="flex gap-1">
+                  <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse"></div>
+                  <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                  <div className="h-2 w-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                </div>
+                <span className="text-xs text-white/70">digitando...</span>
               </div>
             </div>
           )}
